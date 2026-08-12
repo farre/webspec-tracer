@@ -1,0 +1,3272 @@
+[
+  {
+    "name": "A11Y-LONGITUDINAL-TRACKING",
+    "base_url": "https://w3c.github.io/a11y-longitudinal-tracking",
+    "provider": "w3c",
+    "github_repo": "w3c/a11y-longitudinal-tracking"
+  },
+  {
+    "name": "AAR",
+    "base_url": "https://w3c-cg.github.io/aar",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/aar"
+  },
+  {
+    "name": "ACCELEROMETER",
+    "base_url": "https://w3c.github.io/accelerometer",
+    "provider": "w3c",
+    "github_repo": "w3c/accelerometer"
+  },
+  {
+    "name": "ACCNAME",
+    "base_url": "https://w3c.github.io/accname",
+    "provider": "w3c",
+    "github_repo": "w3c/accname"
+  },
+  {
+    "name": "ACTIVITYPUB",
+    "base_url": "https://w3c.github.io/activitypub",
+    "provider": "w3c",
+    "github_repo": "w3c/activitypub"
+  },
+  {
+    "name": "ACTIVITYSTREAMS",
+    "base_url": "https://w3c.github.io/activitystreams",
+    "provider": "w3c",
+    "github_repo": "w3c/activitystreams"
+  },
+  {
+    "name": "ADAPT",
+    "base_url": "https://w3c.github.io/adapt",
+    "provider": "w3c",
+    "github_repo": "w3c/adapt"
+  },
+  {
+    "name": "AI-ACCESSIBILITY",
+    "base_url": "https://w3c.github.io/ai-accessibility",
+    "provider": "w3c",
+    "github_repo": "w3c/ai-accessibility"
+  },
+  {
+    "name": "AI-AGENT-PROTOCOL",
+    "base_url": "https://w3c-cg.github.io/ai-agent-protocol",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/ai-agent-protocol"
+  },
+  {
+    "name": "AMBIENT-LIGHT",
+    "base_url": "https://w3c.github.io/ambient-light",
+    "provider": "w3c",
+    "github_repo": "w3c/ambient-light"
+  },
+  {
+    "name": "ANCHORS",
+    "base_url": "https://immersive-web.github.io/anchors",
+    "provider": "w3c",
+    "github_repo": "immersive-web/anchors"
+  },
+  {
+    "name": "ANIMATION-TRIGGERS-1",
+    "base_url": "https://drafts.csswg.org/animation-triggers-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "AOM",
+    "base_url": "https://wicg.github.io/aom",
+    "provider": "w3c",
+    "github_repo": "WICG/aom"
+  },
+  {
+    "name": "APG-REDESIGN",
+    "base_url": "https://w3c.github.io/apg-redesign",
+    "provider": "w3c",
+    "github_repo": "w3c/apg-redesign"
+  },
+  {
+    "name": "ARIA",
+    "base_url": "https://w3c.github.io/aria",
+    "provider": "w3c",
+    "github_repo": "w3c/aria"
+  },
+  {
+    "name": "AT-DRIVER",
+    "base_url": "https://w3c.github.io/at-driver",
+    "provider": "w3c",
+    "github_repo": "w3c/at-driver"
+  },
+  {
+    "name": "ATAG",
+    "base_url": "https://w3c-cg.github.io/atag",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/atag"
+  },
+  {
+    "name": "ATTRIBUTION",
+    "base_url": "https://w3c.github.io/attribution",
+    "provider": "w3c",
+    "github_repo": "w3c/attribution"
+  },
+  {
+    "name": "ATTRIBUTION-REPORTING-API",
+    "base_url": "https://wicg.github.io/attribution-reporting-api",
+    "provider": "w3c",
+    "github_repo": "WICG/attribution-reporting-api"
+  },
+  {
+    "name": "AUDIO-SESSION",
+    "base_url": "https://w3c.github.io/audio-session",
+    "provider": "w3c",
+    "github_repo": "w3c/audio-session"
+  },
+  {
+    "name": "AUDIOBOOKS",
+    "base_url": "https://w3c.github.io/audiobooks",
+    "provider": "w3c",
+    "github_repo": "w3c/audiobooks"
+  },
+  {
+    "name": "AUTOFILL-EVENT",
+    "base_url": "https://wicg.github.io/autofill-event",
+    "provider": "w3c",
+    "github_repo": "WICG/autofill-event"
+  },
+  {
+    "name": "AUTOMOTIVE",
+    "base_url": "https://w3c.github.io/automotive",
+    "provider": "w3c",
+    "github_repo": "w3c/automotive"
+  },
+  {
+    "name": "AUTOPLAY",
+    "base_url": "https://w3c.github.io/autoplay",
+    "provider": "w3c",
+    "github_repo": "w3c/autoplay"
+  },
+  {
+    "name": "BACKGROUND-FETCH",
+    "base_url": "https://wicg.github.io/background-fetch",
+    "provider": "w3c",
+    "github_repo": "WICG/background-fetch"
+  },
+  {
+    "name": "BACKGROUND-SYNC",
+    "base_url": "https://wicg.github.io/background-sync/spec",
+    "provider": "w3c",
+    "github_repo": "WICG/background-sync"
+  },
+  {
+    "name": "BADGING",
+    "base_url": "https://w3c.github.io/badging",
+    "provider": "w3c",
+    "github_repo": "w3c/badging"
+  },
+  {
+    "name": "BAGGAGE",
+    "base_url": "https://w3c.github.io/baggage",
+    "provider": "w3c",
+    "github_repo": "w3c/baggage"
+  },
+  {
+    "name": "BATTERY",
+    "base_url": "https://w3c.github.io/battery",
+    "provider": "w3c",
+    "github_repo": "w3c/battery"
+  },
+  {
+    "name": "BEACON",
+    "base_url": "https://w3c.github.io/beacon",
+    "provider": "w3c",
+    "github_repo": "w3c/beacon"
+  },
+  {
+    "name": "CAPTURE",
+    "base_url": "https://immersive-web.github.io/capture",
+    "provider": "w3c",
+    "github_repo": "immersive-web/capture"
+  },
+  {
+    "name": "CAPTURE-ALL-SCREENS",
+    "base_url": "https://screen-share.github.io/capture-all-screens",
+    "provider": "w3c",
+    "github_repo": "screen-share/capture-all-screens"
+  },
+  {
+    "name": "CAPTURED-MOUSE-EVENTS",
+    "base_url": "https://screen-share.github.io/captured-mouse-events",
+    "provider": "w3c",
+    "github_repo": "screen-share/captured-mouse-events"
+  },
+  {
+    "name": "CBOR-LD",
+    "base_url": "https://w3c.github.io/cbor-ld",
+    "provider": "w3c",
+    "github_repo": "w3c/cbor-ld"
+  },
+  {
+    "name": "CID",
+    "base_url": "https://w3c.github.io/cid",
+    "provider": "w3c",
+    "github_repo": "w3c/cid"
+  },
+  {
+    "name": "CLIENT-HINTS-INFRASTRUCTURE",
+    "base_url": "https://wicg.github.io/client-hints-infrastructure",
+    "provider": "w3c",
+    "github_repo": "WICG/client-hints-infrastructure"
+  },
+  {
+    "name": "CLIPBOARD-APIS",
+    "base_url": "https://w3c.github.io/clipboard-apis",
+    "provider": "w3c",
+    "github_repo": "w3c/clipboard-apis"
+  },
+  {
+    "name": "COGAI",
+    "base_url": "https://w3c.github.io/cogai",
+    "provider": "w3c",
+    "github_repo": "w3c/cogai"
+  },
+  {
+    "name": "COLOR-API",
+    "base_url": "https://wicg.github.io/color-api",
+    "provider": "w3c",
+    "github_repo": "WICG/color-api"
+  },
+  {
+    "name": "COLORWEB-CG",
+    "base_url": "https://w3c.github.io/ColorWeb-CG",
+    "provider": "w3c",
+    "github_repo": "w3c/ColorWeb-CG"
+  },
+  {
+    "name": "COMPOSITING-1",
+    "base_url": "https://drafts.csswg.org/compositing-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "COMPOSITING-2",
+    "base_url": "https://drafts.csswg.org/compositing-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "COMPUTE-PRESSURE",
+    "base_url": "https://w3c.github.io/compute-pressure",
+    "provider": "w3c",
+    "github_repo": "w3c/compute-pressure"
+  },
+  {
+    "name": "CONNECTION-ALLOWLISTS",
+    "base_url": "https://wicg.github.io/connection-allowlists",
+    "provider": "w3c",
+    "github_repo": "WICG/connection-allowlists"
+  },
+  {
+    "name": "CONTACT-PICKER",
+    "base_url": "https://w3c.github.io/contact-picker",
+    "provider": "w3c",
+    "github_repo": "w3c/contact-picker"
+  },
+  {
+    "name": "CONTAINER-TIMING",
+    "base_url": "https://wicg.github.io/container-timing",
+    "provider": "w3c",
+    "github_repo": "WICG/container-timing"
+  },
+  {
+    "name": "CONTENT-INDEX",
+    "base_url": "https://wicg.github.io/content-index/spec",
+    "provider": "w3c",
+    "github_repo": "WICG/content-index"
+  },
+  {
+    "name": "CORE-AAM",
+    "base_url": "https://w3c.github.io/core-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/core-aam"
+  },
+  {
+    "name": "CPU-PERFORMANCE",
+    "base_url": "https://wicg.github.io/cpu-performance",
+    "provider": "w3c",
+    "github_repo": "WICG/cpu-performance"
+  },
+  {
+    "name": "CRASH-REPORTING",
+    "base_url": "https://wicg.github.io/crash-reporting",
+    "provider": "w3c",
+    "github_repo": "WICG/crash-reporting"
+  },
+  {
+    "name": "CRED-CLAIMS",
+    "base_url": "https://w3c.github.io/cred-claims",
+    "provider": "w3c",
+    "github_repo": "w3c/cred-claims"
+  },
+  {
+    "name": "CROSS-ORIGIN-STORAGE",
+    "base_url": "https://wicg.github.io/cross-origin-storage",
+    "provider": "w3c",
+    "github_repo": "WICG/cross-origin-storage"
+  },
+  {
+    "name": "CSP-NEXT",
+    "base_url": "https://wicg.github.io/csp-next/scripting-policy.html",
+    "provider": "w3c",
+    "github_repo": "WICG/csp-next"
+  },
+  {
+    "name": "CSS-2015",
+    "base_url": "https://drafts.csswg.org/css-2015",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2017",
+    "base_url": "https://drafts.csswg.org/css-2017",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2018",
+    "base_url": "https://drafts.csswg.org/css-2018",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2020",
+    "base_url": "https://drafts.csswg.org/css-2020",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2021",
+    "base_url": "https://drafts.csswg.org/css-2021",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2022",
+    "base_url": "https://drafts.csswg.org/css-2022",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2023",
+    "base_url": "https://drafts.csswg.org/css-2023",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2024",
+    "base_url": "https://drafts.csswg.org/css-2024",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2025",
+    "base_url": "https://drafts.csswg.org/css-2025",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-2026",
+    "base_url": "https://drafts.csswg.org/css-2026",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-AAM",
+    "base_url": "https://w3c.github.io/css-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/css-aam"
+  },
+  {
+    "name": "CSS-ALIGN-3",
+    "base_url": "https://drafts.csswg.org/css-align-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ANCHOR-POSITION-1",
+    "base_url": "https://drafts.csswg.org/css-anchor-position-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ANCHOR-POSITION-2",
+    "base_url": "https://drafts.csswg.org/css-anchor-position-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ANIMATIONS-1",
+    "base_url": "https://drafts.csswg.org/css-animations-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ANIMATIONS-2",
+    "base_url": "https://drafts.csswg.org/css-animations-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BACKGROUNDS-3",
+    "base_url": "https://drafts.csswg.org/css-backgrounds-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BACKGROUNDS-4",
+    "base_url": "https://drafts.csswg.org/css-backgrounds-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BORDERS-4",
+    "base_url": "https://drafts.csswg.org/css-borders-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BOX-3",
+    "base_url": "https://drafts.csswg.org/css-box-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BOX-4",
+    "base_url": "https://drafts.csswg.org/css-box-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BREAK-3",
+    "base_url": "https://drafts.csswg.org/css-break-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-BREAK-4",
+    "base_url": "https://drafts.csswg.org/css-break-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CASCADE-3",
+    "base_url": "https://drafts.csswg.org/css-cascade-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CASCADE-4",
+    "base_url": "https://drafts.csswg.org/css-cascade-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CASCADE-5",
+    "base_url": "https://drafts.csswg.org/css-cascade-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CASCADE-6",
+    "base_url": "https://drafts.csswg.org/css-cascade-6",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COLOR-4",
+    "base_url": "https://drafts.csswg.org/css-color-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COLOR-5",
+    "base_url": "https://drafts.csswg.org/css-color-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COLOR-6",
+    "base_url": "https://drafts.csswg.org/css-color-6",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COLOR-ADJUST-1",
+    "base_url": "https://drafts.csswg.org/css-color-adjust-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COLOR-HDR-1",
+    "base_url": "https://drafts.csswg.org/css-color-hdr-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONDITIONAL-3",
+    "base_url": "https://drafts.csswg.org/css-conditional-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONDITIONAL-4",
+    "base_url": "https://drafts.csswg.org/css-conditional-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONDITIONAL-5",
+    "base_url": "https://drafts.csswg.org/css-conditional-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONDITIONAL-VALUES-1",
+    "base_url": "https://drafts.csswg.org/css-conditional-values-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONTAIN-1",
+    "base_url": "https://drafts.csswg.org/css-contain-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONTAIN-2",
+    "base_url": "https://drafts.csswg.org/css-contain-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONTAIN-3",
+    "base_url": "https://drafts.csswg.org/css-contain-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-CONTENT-3",
+    "base_url": "https://drafts.csswg.org/css-content-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-COUNTER-STYLES-3",
+    "base_url": "https://drafts.csswg.org/css-counter-styles-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-DISPLAY-3",
+    "base_url": "https://drafts.csswg.org/css-display-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-DISPLAY-4",
+    "base_url": "https://drafts.csswg.org/css-display-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-EASING-1",
+    "base_url": "https://drafts.csswg.org/css-easing-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-EASING-2",
+    "base_url": "https://drafts.csswg.org/css-easing-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-EGG-1",
+    "base_url": "https://drafts.csswg.org/css-egg-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ENV-1",
+    "base_url": "https://drafts.csswg.org/css-env-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-EXCLUSIONS-1",
+    "base_url": "https://drafts.csswg.org/css-exclusions-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-EXTENSIONS-1",
+    "base_url": "https://drafts.csswg.org/css-extensions-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-FLEXBOX-1",
+    "base_url": "https://drafts.csswg.org/css-flexbox-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-FONT-LOADING-3",
+    "base_url": "https://drafts.csswg.org/css-font-loading-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-FONTS-4",
+    "base_url": "https://drafts.csswg.org/css-fonts-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-FONTS-5",
+    "base_url": "https://drafts.csswg.org/css-fonts-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-FORMS-1",
+    "base_url": "https://drafts.csswg.org/css-forms-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GAPS-1",
+    "base_url": "https://drafts.csswg.org/css-gaps-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GCPM-3",
+    "base_url": "https://drafts.csswg.org/css-gcpm-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GCPM-4",
+    "base_url": "https://drafts.csswg.org/css-gcpm-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GRID-1",
+    "base_url": "https://drafts.csswg.org/css-grid-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GRID-2",
+    "base_url": "https://drafts.csswg.org/css-grid-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-GRID-3",
+    "base_url": "https://drafts.csswg.org/css-grid-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-HIGHLIGHT-API-1",
+    "base_url": "https://drafts.csswg.org/css-highlight-api-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-IMAGE-ANIMATION-1",
+    "base_url": "https://drafts.csswg.org/css-image-animation-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-IMAGES-3",
+    "base_url": "https://drafts.csswg.org/css-images-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-IMAGES-4",
+    "base_url": "https://drafts.csswg.org/css-images-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-IMAGES-5",
+    "base_url": "https://drafts.csswg.org/css-images-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-INLINE-3",
+    "base_url": "https://drafts.csswg.org/css-inline-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-LINE-GRID-1",
+    "base_url": "https://drafts.csswg.org/css-line-grid-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-LINK-PARAMS-1",
+    "base_url": "https://drafts.csswg.org/css-link-params-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-LISTS-3",
+    "base_url": "https://drafts.csswg.org/css-lists-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-LOGICAL-1",
+    "base_url": "https://drafts.csswg.org/css-logical-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-MASKING-1",
+    "base_url": "https://drafts.csswg.org/css-masking-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-MIXINS-1",
+    "base_url": "https://drafts.csswg.org/css-mixins-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-MOBILE",
+    "base_url": "https://drafts.csswg.org/css-mobile",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-MULTICOL-1",
+    "base_url": "https://drafts.csswg.org/css-multicol-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-MULTICOL-2",
+    "base_url": "https://drafts.csswg.org/css-multicol-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-NAMESPACES-3",
+    "base_url": "https://drafts.csswg.org/css-namespaces-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-NAV-1",
+    "base_url": "https://drafts.csswg.org/css-nav-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-NAVIGATION-1",
+    "base_url": "https://drafts.csswg.org/css-navigation-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-NESTING-1",
+    "base_url": "https://drafts.csswg.org/css-nesting-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-OVERFLOW-3",
+    "base_url": "https://drafts.csswg.org/css-overflow-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-OVERFLOW-4",
+    "base_url": "https://drafts.csswg.org/css-overflow-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-OVERFLOW-5",
+    "base_url": "https://drafts.csswg.org/css-overflow-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-OVERSCROLL-1",
+    "base_url": "https://drafts.csswg.org/css-overscroll-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-PAGE-3",
+    "base_url": "https://drafts.csswg.org/css-page-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-PAGE-4",
+    "base_url": "https://drafts.csswg.org/css-page-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-PAGE-FLOATS-3",
+    "base_url": "https://drafts.csswg.org/css-page-floats-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-POSITION-3",
+    "base_url": "https://drafts.csswg.org/css-position-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-POSITION-4",
+    "base_url": "https://drafts.csswg.org/css-position-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-PRINT",
+    "base_url": "https://drafts.csswg.org/css-print",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-PSEUDO-4",
+    "base_url": "https://drafts.csswg.org/css-pseudo-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-REGIONS-1",
+    "base_url": "https://drafts.csswg.org/css-regions-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-RHYTHM-1",
+    "base_url": "https://drafts.csswg.org/css-rhythm-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-ROUND-DISPLAY-1",
+    "base_url": "https://drafts.csswg.org/css-round-display-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-RUBY-1",
+    "base_url": "https://drafts.csswg.org/css-ruby-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SCROLL-ANCHORING-1",
+    "base_url": "https://drafts.csswg.org/css-scroll-anchoring-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SCROLL-SNAP-1",
+    "base_url": "https://drafts.csswg.org/css-scroll-snap-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SCROLL-SNAP-2",
+    "base_url": "https://drafts.csswg.org/css-scroll-snap-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SCROLLBARS-1",
+    "base_url": "https://drafts.csswg.org/css-scrollbars-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SHADOW-1",
+    "base_url": "https://drafts.csswg.org/css-shadow-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SHAPES-1",
+    "base_url": "https://drafts.csswg.org/css-shapes-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SHAPES-2",
+    "base_url": "https://drafts.csswg.org/css-shapes-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SIZE-ADJUST-1",
+    "base_url": "https://drafts.csswg.org/css-size-adjust-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SIZING-3",
+    "base_url": "https://drafts.csswg.org/css-sizing-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SIZING-4",
+    "base_url": "https://drafts.csswg.org/css-sizing-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SPEECH-1",
+    "base_url": "https://drafts.csswg.org/css-speech-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-SYNTAX-3",
+    "base_url": "https://drafts.csswg.org/css-syntax-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TABLES-3",
+    "base_url": "https://drafts.csswg.org/css-tables-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TEXT-3",
+    "base_url": "https://drafts.csswg.org/css-text-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TEXT-4",
+    "base_url": "https://drafts.csswg.org/css-text-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TEXT-DECOR-3",
+    "base_url": "https://drafts.csswg.org/css-text-decor-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TEXT-DECOR-4",
+    "base_url": "https://drafts.csswg.org/css-text-decor-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TRANSFORMS-1",
+    "base_url": "https://drafts.csswg.org/css-transforms-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TRANSFORMS-2",
+    "base_url": "https://drafts.csswg.org/css-transforms-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TRANSITIONS-1",
+    "base_url": "https://drafts.csswg.org/css-transitions-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-TRANSITIONS-2",
+    "base_url": "https://drafts.csswg.org/css-transitions-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-UI-3",
+    "base_url": "https://drafts.csswg.org/css-ui-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-UI-4",
+    "base_url": "https://drafts.csswg.org/css-ui-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VALUES-3",
+    "base_url": "https://drafts.csswg.org/css-values-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VALUES-4",
+    "base_url": "https://drafts.csswg.org/css-values-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VALUES-5",
+    "base_url": "https://drafts.csswg.org/css-values-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VARIABLES-1",
+    "base_url": "https://drafts.csswg.org/css-variables-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VARIABLES-2",
+    "base_url": "https://drafts.csswg.org/css-variables-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VIEW-TRANSITIONS-1",
+    "base_url": "https://drafts.csswg.org/css-view-transitions-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VIEW-TRANSITIONS-2",
+    "base_url": "https://drafts.csswg.org/css-view-transitions-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-VIEWPORT-1",
+    "base_url": "https://drafts.csswg.org/css-viewport-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-WILL-CHANGE-1",
+    "base_url": "https://drafts.csswg.org/css-will-change-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-WRITING-MODES-3",
+    "base_url": "https://drafts.csswg.org/css-writing-modes-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS-WRITING-MODES-4",
+    "base_url": "https://drafts.csswg.org/css-writing-modes-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSS2",
+    "base_url": "https://drafts.csswg.org/css2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSSOM-1",
+    "base_url": "https://drafts.csswg.org/cssom-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSSOM-VIEW-1",
+    "base_url": "https://drafts.csswg.org/cssom-view-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "CSVW",
+    "base_url": "https://w3c.github.io/csvw",
+    "provider": "w3c",
+    "github_repo": "w3c/csvw"
+  },
+  {
+    "name": "DAPT",
+    "base_url": "https://w3c.github.io/dapt",
+    "provider": "w3c",
+    "github_repo": "w3c/dapt"
+  },
+  {
+    "name": "DATACUE",
+    "base_url": "https://wicg.github.io/datacue",
+    "provider": "w3c",
+    "github_repo": "WICG/datacue"
+  },
+  {
+    "name": "DATADOC",
+    "base_url": "https://w3c-cg.github.io/datadoc",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/datadoc"
+  },
+  {
+    "name": "DEPRECATION-REPORTING",
+    "base_url": "https://wicg.github.io/deprecation-reporting",
+    "provider": "w3c",
+    "github_repo": "WICG/deprecation-reporting"
+  },
+  {
+    "name": "DEVICE-MEMORY",
+    "base_url": "https://w3c.github.io/device-memory",
+    "provider": "w3c",
+    "github_repo": "w3c/device-memory"
+  },
+  {
+    "name": "DEVICE-POSTURE",
+    "base_url": "https://w3c.github.io/device-posture",
+    "provider": "w3c",
+    "github_repo": "w3c/device-posture"
+  },
+  {
+    "name": "DEVICEORIENTATION",
+    "base_url": "https://w3c.github.io/deviceorientation",
+    "provider": "w3c",
+    "github_repo": "w3c/deviceorientation"
+  },
+  {
+    "name": "DID",
+    "base_url": "https://w3c.github.io/did",
+    "provider": "w3c",
+    "github_repo": "w3c/did"
+  },
+  {
+    "name": "DID-RESOLUTION",
+    "base_url": "https://w3c.github.io/did-resolution",
+    "provider": "w3c",
+    "github_repo": "w3c/did-resolution"
+  },
+  {
+    "name": "DMPL",
+    "base_url": "https://w3c.github.io/dmpl",
+    "provider": "w3c",
+    "github_repo": "w3c/dmpl"
+  },
+  {
+    "name": "DMS",
+    "base_url": "https://w3c.github.io/dms",
+    "provider": "w3c",
+    "github_repo": "w3c/dms"
+  },
+  {
+    "name": "DOCUMENT-PICTURE-IN-PICTURE",
+    "base_url": "https://wicg.github.io/document-picture-in-picture",
+    "provider": "w3c",
+    "github_repo": "WICG/document-picture-in-picture"
+  },
+  {
+    "name": "DOCUMENT-POLICY",
+    "base_url": "https://wicg.github.io/document-policy",
+    "provider": "w3c",
+    "github_repo": "WICG/document-policy"
+  },
+  {
+    "name": "DOM-OVERLAYS",
+    "base_url": "https://immersive-web.github.io/dom-overlays",
+    "provider": "w3c",
+    "github_repo": "immersive-web/dom-overlays"
+  },
+  {
+    "name": "DPUB-AAM",
+    "base_url": "https://w3c.github.io/dpub-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/dpub-aam"
+  },
+  {
+    "name": "DPUB-ARIA",
+    "base_url": "https://w3c.github.io/dpub-aria",
+    "provider": "w3c",
+    "github_repo": "w3c/dpub-aria"
+  },
+  {
+    "name": "DWBP",
+    "base_url": "https://w3c.github.io/dwbp",
+    "provider": "w3c",
+    "github_repo": "w3c/dwbp"
+  },
+  {
+    "name": "DX-CONNEGP",
+    "base_url": "https://w3c.github.io/dx-connegp/connegp",
+    "provider": "w3c",
+    "github_repo": "w3c/dx-connegp"
+  },
+  {
+    "name": "DXWG",
+    "base_url": "https://w3c.github.io/dxwg/dcat",
+    "provider": "w3c",
+    "github_repo": "w3c/dxwg"
+  },
+  {
+    "name": "EDIT-CONTEXT",
+    "base_url": "https://w3c.github.io/edit-context",
+    "provider": "w3c",
+    "github_repo": "w3c/edit-context"
+  },
+  {
+    "name": "EDITING",
+    "base_url": "https://w3c.github.io/editing",
+    "provider": "w3c",
+    "github_repo": "w3c/editing"
+  },
+  {
+    "name": "ELEMENT-CAPTURE",
+    "base_url": "https://screen-share.github.io/element-capture",
+    "provider": "w3c",
+    "github_repo": "screen-share/element-capture"
+  },
+  {
+    "name": "ELEMENT-TIMING",
+    "base_url": "https://w3c.github.io/element-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/element-timing"
+  },
+  {
+    "name": "ENCRYPTED-MEDIA",
+    "base_url": "https://w3c.github.io/encrypted-media",
+    "provider": "w3c",
+    "github_repo": "w3c/encrypted-media"
+  },
+  {
+    "name": "ENTRIES-API",
+    "base_url": "https://wicg.github.io/entries-api",
+    "provider": "w3c",
+    "github_repo": "WICG/entries-api"
+  },
+  {
+    "name": "EPUB-SPECS",
+    "base_url": "https://w3c.github.io/epub-specs",
+    "provider": "w3c",
+    "github_repo": "w3c/epub-specs"
+  },
+  {
+    "name": "EVENT-TIMING",
+    "base_url": "https://w3c.github.io/event-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/event-timing"
+  },
+  {
+    "name": "EXI-SPECS",
+    "base_url": "https://w3c.github.io/exi-specs",
+    "provider": "w3c",
+    "github_repo": "w3c/exi-specs"
+  },
+  {
+    "name": "FAST",
+    "base_url": "https://w3c.github.io/fast",
+    "provider": "w3c",
+    "github_repo": "w3c/fast"
+  },
+  {
+    "name": "FEDCM",
+    "base_url": "https://w3c-fedid.github.io/FedCM",
+    "provider": "w3c",
+    "github_repo": "w3c-fedid/FedCM"
+  },
+  {
+    "name": "FEDERATED-CREDENTIALS",
+    "base_url": "https://w3c.github.io/federated-credentials",
+    "provider": "w3c",
+    "github_repo": "w3c/federated-credentials"
+  },
+  {
+    "name": "FENCED-FRAME",
+    "base_url": "https://wicg.github.io/fenced-frame",
+    "provider": "w3c",
+    "github_repo": "WICG/fenced-frame"
+  },
+  {
+    "name": "FILE-SYSTEM-ACCESS",
+    "base_url": "https://wicg.github.io/file-system-access",
+    "provider": "w3c",
+    "github_repo": "WICG/file-system-access"
+  },
+  {
+    "name": "FILEAPI",
+    "base_url": "https://w3c.github.io/FileAPI",
+    "provider": "w3c",
+    "github_repo": "w3c/FileAPI"
+  },
+  {
+    "name": "FILL-STROKE-3",
+    "base_url": "https://drafts.csswg.org/fill-stroke-3",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "FILTER-EFFECTS-1",
+    "base_url": "https://drafts.csswg.org/filter-effects-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "FILTER-EFFECTS-2",
+    "base_url": "https://drafts.csswg.org/filter-effects-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "FXTF-DRAFTS",
+    "base_url": "https://w3c.github.io/fxtf-drafts",
+    "provider": "w3c",
+    "github_repo": "w3c/fxtf-drafts"
+  },
+  {
+    "name": "GAMEPAD",
+    "base_url": "https://w3c.github.io/gamepad",
+    "provider": "w3c",
+    "github_repo": "w3c/gamepad"
+  },
+  {
+    "name": "GEOLOCATION",
+    "base_url": "https://w3c.github.io/geolocation",
+    "provider": "w3c",
+    "github_repo": "w3c/geolocation"
+  },
+  {
+    "name": "GEOLOCATION-SENSOR",
+    "base_url": "https://w3c.github.io/geolocation-sensor",
+    "provider": "w3c",
+    "github_repo": "w3c/geolocation-sensor"
+  },
+  {
+    "name": "GEOMETRY-1",
+    "base_url": "https://drafts.csswg.org/geometry-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "GET-INSTALLED-RELATED-APPS",
+    "base_url": "https://wicg.github.io/get-installed-related-apps/spec",
+    "provider": "w3c",
+    "github_repo": "WICG/get-installed-related-apps"
+  },
+  {
+    "name": "GPC",
+    "base_url": "https://w3c.github.io/gpc",
+    "provider": "w3c",
+    "github_repo": "w3c/gpc"
+  },
+  {
+    "name": "GRAPHICS-AAM",
+    "base_url": "https://w3c.github.io/graphics-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/graphics-aam"
+  },
+  {
+    "name": "GRAPHICS-ARIA",
+    "base_url": "https://w3c.github.io/graphics-aria",
+    "provider": "w3c",
+    "github_repo": "w3c/graphics-aria"
+  },
+  {
+    "name": "GYROSCOPE",
+    "base_url": "https://w3c.github.io/gyroscope",
+    "provider": "w3c",
+    "github_repo": "w3c/gyroscope"
+  },
+  {
+    "name": "HANDWRITING-RECOGNITION",
+    "base_url": "https://wicg.github.io/handwriting-recognition",
+    "provider": "w3c",
+    "github_repo": "WICG/handwriting-recognition"
+  },
+  {
+    "name": "HCLS-CCDA-RDF",
+    "base_url": "https://w3c.github.io/hcls-ccda-rdf",
+    "provider": "w3c",
+    "github_repo": "w3c/hcls-ccda-rdf"
+  },
+  {
+    "name": "HCLS-FHIR-RDF",
+    "base_url": "https://w3c.github.io/hcls-fhir-rdf",
+    "provider": "w3c",
+    "github_repo": "w3c/hcls-fhir-rdf"
+  },
+  {
+    "name": "HCLS-NATURAL-PRODUCT-DRUG-INTERACTION-FAIR",
+    "base_url": "https://w3c.github.io/hcls-natural-product-drug-interaction-fair",
+    "provider": "w3c",
+    "github_repo": "w3c/hcls-natural-product-drug-interaction-fair"
+  },
+  {
+    "name": "HIT-TEST",
+    "base_url": "https://immersive-web.github.io/hit-test",
+    "provider": "w3c",
+    "github_repo": "immersive-web/hit-test"
+  },
+  {
+    "name": "HR-TIME",
+    "base_url": "https://w3c.github.io/hr-time",
+    "provider": "w3c",
+    "github_repo": "w3c/hr-time"
+  },
+  {
+    "name": "HTML-AAM",
+    "base_url": "https://w3c.github.io/html-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/html-aam"
+  },
+  {
+    "name": "HTML-ARIA",
+    "base_url": "https://w3c.github.io/html-aria",
+    "provider": "w3c",
+    "github_repo": "w3c/html-aria"
+  },
+  {
+    "name": "HTML-MEDIA-CAPTURE",
+    "base_url": "https://w3c.github.io/html-media-capture",
+    "provider": "w3c",
+    "github_repo": "w3c/html-media-capture"
+  },
+  {
+    "name": "HTML-RUBY",
+    "base_url": "https://w3c.github.io/html-ruby",
+    "provider": "w3c",
+    "github_repo": "w3c/html-ruby"
+  },
+  {
+    "name": "HTMLVOC",
+    "base_url": "https://floresbakker.github.io/htmlvoc",
+    "provider": "w3c",
+    "github_repo": "floresbakker/htmlvoc"
+  },
+  {
+    "name": "IFT",
+    "base_url": "https://w3c.github.io/IFT/Overview.html",
+    "provider": "w3c",
+    "github_repo": "w3c/IFT"
+  },
+  {
+    "name": "IMAGE-RESOURCE",
+    "base_url": "https://w3c.github.io/image-resource",
+    "provider": "w3c",
+    "github_repo": "w3c/image-resource"
+  },
+  {
+    "name": "IMAGE-TRACKING",
+    "base_url": "https://immersive-web.github.io/marker-tracking",
+    "provider": "w3c",
+    "github_repo": "immersive-web/image-tracking"
+  },
+  {
+    "name": "IMMERSIVE-CAPTIONS-CG",
+    "base_url": "https://w3c.github.io/immersive-captions-cg",
+    "provider": "w3c",
+    "github_repo": "w3c/immersive-captions-cg"
+  },
+  {
+    "name": "IMSC",
+    "base_url": "https://w3c.github.io/imsc",
+    "provider": "w3c",
+    "github_repo": "w3c/imsc"
+  },
+  {
+    "name": "IMSC-HRM",
+    "base_url": "https://w3c.github.io/imsc-hrm/spec/imsc-hrm.html",
+    "provider": "w3c",
+    "github_repo": "w3c/imsc-hrm"
+  },
+  {
+    "name": "INDEXEDDB",
+    "base_url": "https://w3c.github.io/IndexedDB",
+    "provider": "w3c",
+    "github_repo": "w3c/IndexedDB"
+  },
+  {
+    "name": "INDEXES",
+    "base_url": "https://drafts.csswg.org/indexes",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "INPUT-EVENTS",
+    "base_url": "https://w3c.github.io/input-events",
+    "provider": "w3c",
+    "github_repo": "w3c/input-events"
+  },
+  {
+    "name": "INTERACTIVE-MEDIA-CG",
+    "base_url": "https://w3c.github.io/interactive-media-cg",
+    "provider": "w3c",
+    "github_repo": "w3c/interactive-media-cg"
+  },
+  {
+    "name": "INTERSECTIONOBSERVER",
+    "base_url": "https://w3c.github.io/IntersectionObserver",
+    "provider": "w3c",
+    "github_repo": "w3c/IntersectionObserver"
+  },
+  {
+    "name": "INTERVENTION-REPORTING",
+    "base_url": "https://wicg.github.io/intervention-reporting",
+    "provider": "w3c",
+    "github_repo": "WICG/intervention-reporting"
+  },
+  {
+    "name": "IS-INPUT-PENDING",
+    "base_url": "https://wicg.github.io/is-input-pending",
+    "provider": "w3c",
+    "github_repo": "WICG/is-input-pending"
+  },
+  {
+    "name": "JSON-LD-API",
+    "base_url": "https://w3c.github.io/json-ld-api",
+    "provider": "w3c",
+    "github_repo": "w3c/json-ld-api"
+  },
+  {
+    "name": "JSON-LD-FRAMING",
+    "base_url": "https://w3c.github.io/json-ld-framing",
+    "provider": "w3c",
+    "github_repo": "w3c/json-ld-framing"
+  },
+  {
+    "name": "JSON-LD-STAR",
+    "base_url": "https://json-ld.github.io/json-ld-star",
+    "provider": "w3c",
+    "github_repo": "json-ld/json-ld-star"
+  },
+  {
+    "name": "JSON-LD-SYNTAX",
+    "base_url": "https://w3c.github.io/json-ld-syntax",
+    "provider": "w3c",
+    "github_repo": "w3c/json-ld-syntax"
+  },
+  {
+    "name": "KEYBOARD-LOCK",
+    "base_url": "https://wicg.github.io/keyboard-lock",
+    "provider": "w3c",
+    "github_repo": "WICG/keyboard-lock"
+  },
+  {
+    "name": "KEYBOARD-MAP",
+    "base_url": "https://wicg.github.io/keyboard-map",
+    "provider": "w3c",
+    "github_repo": "WICG/keyboard-map"
+  },
+  {
+    "name": "LARGEST-CONTENTFUL-PAINT",
+    "base_url": "https://w3c.github.io/largest-contentful-paint",
+    "provider": "w3c",
+    "github_repo": "w3c/largest-contentful-paint"
+  },
+  {
+    "name": "LAYERS",
+    "base_url": "https://immersive-web.github.io/layers",
+    "provider": "w3c",
+    "github_repo": "immersive-web/layers"
+  },
+  {
+    "name": "LAYOUT-INSTABILITY",
+    "base_url": "https://wicg.github.io/layout-instability",
+    "provider": "w3c",
+    "github_repo": "WICG/layout-instability"
+  },
+  {
+    "name": "LDN",
+    "base_url": "https://w3c.github.io/ldn",
+    "provider": "w3c",
+    "github_repo": "w3c/ldn"
+  },
+  {
+    "name": "LIGHTING-ESTIMATION",
+    "base_url": "https://immersive-web.github.io/lighting-estimation",
+    "provider": "w3c",
+    "github_repo": "immersive-web/lighting-estimation"
+  },
+  {
+    "name": "LOCAL-FONT-ACCESS",
+    "base_url": "https://wicg.github.io/local-font-access",
+    "provider": "w3c",
+    "github_repo": "WICG/local-font-access"
+  },
+  {
+    "name": "LOCAL-NETWORK-ACCESS",
+    "base_url": "https://wicg.github.io/local-network-access",
+    "provider": "w3c",
+    "github_repo": "WICG/local-network-access"
+  },
+  {
+    "name": "LOCAL-PEER-TO-PEER",
+    "base_url": "https://wicg.github.io/local-peer-to-peer",
+    "provider": "w3c",
+    "github_repo": "WICG/local-peer-to-peer"
+  },
+  {
+    "name": "LOGIN-STATUS",
+    "base_url": "https://w3c-fedid.github.io/login-status",
+    "provider": "w3c",
+    "github_repo": "w3c-fedid/login-status"
+  },
+  {
+    "name": "LONG-ANIMATION-FRAMES",
+    "base_url": "https://w3c.github.io/long-animation-frames",
+    "provider": "w3c",
+    "github_repo": "w3c/long-animation-frames"
+  },
+  {
+    "name": "LONGTASKS",
+    "base_url": "https://w3c.github.io/longtasks",
+    "provider": "w3c",
+    "github_repo": "w3c/longtasks"
+  },
+  {
+    "name": "LOW-VISION-SC",
+    "base_url": "https://w3c.github.io/low-vision-SC",
+    "provider": "w3c",
+    "github_repo": "w3c/low-vision-SC"
+  },
+  {
+    "name": "LWS-PROTOCOL",
+    "base_url": "https://w3c.github.io/lws-protocol",
+    "provider": "w3c",
+    "github_repo": "w3c/lws-protocol"
+  },
+  {
+    "name": "MAGNETOMETER",
+    "base_url": "https://w3c.github.io/magnetometer",
+    "provider": "w3c",
+    "github_repo": "w3c/magnetometer"
+  },
+  {
+    "name": "MANIFEST",
+    "base_url": "https://w3c.github.io/manifest",
+    "provider": "w3c",
+    "github_repo": "w3c/manifest"
+  },
+  {
+    "name": "MANIFEST-INCUBATIONS",
+    "base_url": "https://wicg.github.io/manifest-incubations",
+    "provider": "w3c",
+    "github_repo": "WICG/manifest-incubations"
+  },
+  {
+    "name": "MATHML",
+    "base_url": "https://w3c.github.io/mathml",
+    "provider": "w3c",
+    "github_repo": "w3c/mathml"
+  },
+  {
+    "name": "MATHML-AAM",
+    "base_url": "https://w3c.github.io/mathml-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/mathml-aam"
+  },
+  {
+    "name": "MATHML-CORE",
+    "base_url": "https://w3c.github.io/mathml-core",
+    "provider": "w3c",
+    "github_repo": "w3c/mathml-core"
+  },
+  {
+    "name": "MATRIX",
+    "base_url": "https://drafts.csswg.org/matrix",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "MAUR",
+    "base_url": "https://w3c.github.io/maur",
+    "provider": "w3c",
+    "github_repo": "w3c/maur"
+  },
+  {
+    "name": "MEDIA-ACCESSIBILITY-REQS",
+    "base_url": "https://w3c.github.io/media-accessibility-reqs",
+    "provider": "w3c",
+    "github_repo": "w3c/media-accessibility-reqs"
+  },
+  {
+    "name": "MEDIA-CAPABILITIES",
+    "base_url": "https://w3c.github.io/media-capabilities",
+    "provider": "w3c",
+    "github_repo": "w3c/media-capabilities"
+  },
+  {
+    "name": "MEDIA-FEEDS",
+    "base_url": "https://wicg.github.io/media-feeds",
+    "provider": "w3c",
+    "github_repo": "WICG/media-feeds"
+  },
+  {
+    "name": "MEDIA-PLAYBACK-QUALITY",
+    "base_url": "https://w3c.github.io/media-playback-quality",
+    "provider": "w3c",
+    "github_repo": "w3c/media-playback-quality"
+  },
+  {
+    "name": "MEDIA-SOURCE",
+    "base_url": "https://w3c.github.io/media-source",
+    "provider": "w3c",
+    "github_repo": "w3c/media-source"
+  },
+  {
+    "name": "MEDIACAPTURE-AUTOMATION",
+    "base_url": "https://w3c.github.io/mediacapture-automation",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-automation"
+  },
+  {
+    "name": "MEDIACAPTURE-EXTENSIONS",
+    "base_url": "https://w3c.github.io/mediacapture-extensions",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-extensions"
+  },
+  {
+    "name": "MEDIACAPTURE-FROMELEMENT",
+    "base_url": "https://w3c.github.io/mediacapture-fromelement",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-fromelement"
+  },
+  {
+    "name": "MEDIACAPTURE-HANDLE",
+    "base_url": "https://w3c.github.io/mediacapture-handle",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-handle"
+  },
+  {
+    "name": "MEDIACAPTURE-IMAGE",
+    "base_url": "https://w3c.github.io/mediacapture-image",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-image"
+  },
+  {
+    "name": "MEDIACAPTURE-MAIN",
+    "base_url": "https://w3c.github.io/mediacapture-main",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-main"
+  },
+  {
+    "name": "MEDIACAPTURE-OUTPUT",
+    "base_url": "https://w3c.github.io/mediacapture-output",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-output"
+  },
+  {
+    "name": "MEDIACAPTURE-RECORD",
+    "base_url": "https://w3c.github.io/mediacapture-record",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-record"
+  },
+  {
+    "name": "MEDIACAPTURE-REGION",
+    "base_url": "https://w3c.github.io/mediacapture-region",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-region"
+  },
+  {
+    "name": "MEDIACAPTURE-SCREEN-SHARE",
+    "base_url": "https://w3c.github.io/mediacapture-screen-share",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-screen-share"
+  },
+  {
+    "name": "MEDIACAPTURE-SCREEN-SHARE-EXTENSIONS",
+    "base_url": "https://w3c.github.io/mediacapture-screen-share-extensions",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-screen-share-extensions"
+  },
+  {
+    "name": "MEDIACAPTURE-SURFACE-CONTROL",
+    "base_url": "https://w3c.github.io/mediacapture-surface-control",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-surface-control"
+  },
+  {
+    "name": "MEDIACAPTURE-TRANSFORM",
+    "base_url": "https://w3c.github.io/mediacapture-transform",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-transform"
+  },
+  {
+    "name": "MEDIACAPTURE-VIEWPORT",
+    "base_url": "https://w3c.github.io/mediacapture-viewport",
+    "provider": "w3c",
+    "github_repo": "w3c/mediacapture-viewport"
+  },
+  {
+    "name": "MEDIAQUERIES-4",
+    "base_url": "https://drafts.csswg.org/mediaqueries-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "MEDIAQUERIES-5",
+    "base_url": "https://drafts.csswg.org/mediaqueries-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "MEDIASESSION",
+    "base_url": "https://w3c.github.io/mediasession",
+    "provider": "w3c",
+    "github_repo": "w3c/mediasession"
+  },
+  {
+    "name": "MERCHANTCG",
+    "base_url": "https://w3c.github.io/merchantcg",
+    "provider": "w3c",
+    "github_repo": "w3c/merchantcg"
+  },
+  {
+    "name": "MINIAPP-ADDRESSING",
+    "base_url": "https://w3c.github.io/miniapp-addressing",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-addressing"
+  },
+  {
+    "name": "MINIAPP-COMPONENTS",
+    "base_url": "https://w3c.github.io/miniapp-components",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-components"
+  },
+  {
+    "name": "MINIAPP-IOT",
+    "base_url": "https://w3c.github.io/miniapp-iot",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-iot"
+  },
+  {
+    "name": "MINIAPP-LIFECYCLE",
+    "base_url": "https://w3c.github.io/miniapp-lifecycle",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-lifecycle"
+  },
+  {
+    "name": "MINIAPP-MANIFEST",
+    "base_url": "https://w3c.github.io/miniapp-manifest",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-manifest"
+  },
+  {
+    "name": "MINIAPP-PACKAGING",
+    "base_url": "https://w3c.github.io/miniapp-packaging",
+    "provider": "w3c",
+    "github_repo": "w3c/miniapp-packaging"
+  },
+  {
+    "name": "MNX",
+    "base_url": "https://w3c.github.io/mnx",
+    "provider": "w3c",
+    "github_repo": "w3c/mnx"
+  },
+  {
+    "name": "MODEL-ELEMENT",
+    "base_url": "https://immersive-web.github.io/model-element",
+    "provider": "w3c",
+    "github_repo": "immersive-web/model-element"
+  },
+  {
+    "name": "MOTION-1",
+    "base_url": "https://drafts.csswg.org/motion-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "MST-CONTENT-HINT",
+    "base_url": "https://w3c.github.io/mst-content-hint",
+    "provider": "w3c",
+    "github_repo": "w3c/mst-content-hint"
+  },
+  {
+    "name": "MUSICXML",
+    "base_url": "https://w3c.github.io/musicxml",
+    "provider": "w3c",
+    "github_repo": "w3c/musicxml"
+  },
+  {
+    "name": "N3",
+    "base_url": "https://w3c.github.io/N3",
+    "provider": "w3c",
+    "github_repo": "w3c/N3"
+  },
+  {
+    "name": "NAV-SPECULATION-PREFETCH",
+    "base_url": "https://wicg.github.io/nav-speculation/prefetch.html",
+    "provider": "w3c",
+    "github_repo": "WICG/nav-speculation"
+  },
+  {
+    "name": "NAV-SPECULATION-PRERENDERING",
+    "base_url": "https://wicg.github.io/nav-speculation/prerendering.html",
+    "provider": "w3c",
+    "github_repo": "WICG/nav-speculation"
+  },
+  {
+    "name": "NAV-TRACKING-MITIGATIONS",
+    "base_url": "https://privacycg.github.io/nav-tracking-mitigations",
+    "provider": "w3c",
+    "github_repo": "privacycg/nav-tracking-mitigations"
+  },
+  {
+    "name": "NAVIGATION-TIMING",
+    "base_url": "https://w3c.github.io/navigation-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/navigation-timing"
+  },
+  {
+    "name": "NDJSON-LD",
+    "base_url": "https://json-ld.github.io/ndjson-ld",
+    "provider": "w3c",
+    "github_repo": "json-ld/ndjson-ld"
+  },
+  {
+    "name": "NETINFO",
+    "base_url": "https://wicg.github.io/netinfo",
+    "provider": "w3c",
+    "github_repo": "WICG/netinfo"
+  },
+  {
+    "name": "NETWORK-ERROR-LOGGING",
+    "base_url": "https://w3c.github.io/network-error-logging",
+    "provider": "w3c",
+    "github_repo": "w3c/network-error-logging"
+  },
+  {
+    "name": "OBSERVABLE",
+    "base_url": "https://wicg.github.io/observable",
+    "provider": "w3c",
+    "github_repo": "WICG/observable"
+  },
+  {
+    "name": "OPENSCREENPROTOCOL",
+    "base_url": "https://w3c.github.io/openscreenprotocol",
+    "provider": "w3c",
+    "github_repo": "w3c/openscreenprotocol"
+  },
+  {
+    "name": "ORIENTATION-SENSOR",
+    "base_url": "https://w3c.github.io/orientation-sensor",
+    "provider": "w3c",
+    "github_repo": "w3c/orientation-sensor"
+  },
+  {
+    "name": "P2P-WEBTRANSPORT",
+    "base_url": "https://w3c.github.io/p2p-webtransport",
+    "provider": "w3c",
+    "github_repo": "w3c/p2p-webtransport"
+  },
+  {
+    "name": "PAGE-LIFECYCLE",
+    "base_url": "https://wicg.github.io/page-lifecycle",
+    "provider": "w3c",
+    "github_repo": "WICG/page-lifecycle"
+  },
+  {
+    "name": "PAINT-TIMING",
+    "base_url": "https://w3c.github.io/paint-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/paint-timing"
+  },
+  {
+    "name": "PASSWORD-CREDENTIALS",
+    "base_url": "https://w3c.github.io/password-credentials",
+    "provider": "w3c",
+    "github_repo": "w3c/password-credentials"
+  },
+  {
+    "name": "PAYMENT-ACCESSIBILITY-REQS",
+    "base_url": "https://w3c.github.io/payment-accessibility-reqs",
+    "provider": "w3c",
+    "github_repo": "w3c/payment-accessibility-reqs"
+  },
+  {
+    "name": "PAYMENT-METHOD-ID",
+    "base_url": "https://w3c.github.io/payment-method-id",
+    "provider": "w3c",
+    "github_repo": "w3c/payment-method-id"
+  },
+  {
+    "name": "PAYMENT-METHOD-MANIFEST",
+    "base_url": "https://w3c.github.io/payment-method-manifest",
+    "provider": "w3c",
+    "github_repo": "w3c/payment-method-manifest"
+  },
+  {
+    "name": "PAYMENT-REQUEST",
+    "base_url": "https://w3c.github.io/payment-request",
+    "provider": "w3c",
+    "github_repo": "w3c/payment-request"
+  },
+  {
+    "name": "PDF-AAM",
+    "base_url": "https://w3c.github.io/pdf-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/pdf-aam"
+  },
+  {
+    "name": "PERFORMANCE-TIMELINE",
+    "base_url": "https://w3c.github.io/performance-timeline",
+    "provider": "w3c",
+    "github_repo": "w3c/performance-timeline"
+  },
+  {
+    "name": "PERIODIC-BACKGROUND-SYNC",
+    "base_url": "https://wicg.github.io/periodic-background-sync",
+    "provider": "w3c",
+    "github_repo": "WICG/periodic-background-sync"
+  },
+  {
+    "name": "PERMISSIONS",
+    "base_url": "https://w3c.github.io/permissions",
+    "provider": "w3c",
+    "github_repo": "w3c/permissions"
+  },
+  {
+    "name": "PERMISSIONS-REQUEST",
+    "base_url": "https://wicg.github.io/permissions-request",
+    "provider": "w3c",
+    "github_repo": "WICG/permissions-request"
+  },
+  {
+    "name": "PERMISSIONS-REVOKE",
+    "base_url": "https://wicg.github.io/permissions-revoke",
+    "provider": "w3c",
+    "github_repo": "WICG/permissions-revoke"
+  },
+  {
+    "name": "PICTURE-IN-PICTURE",
+    "base_url": "https://w3c.github.io/picture-in-picture",
+    "provider": "w3c",
+    "github_repo": "w3c/picture-in-picture"
+  },
+  {
+    "name": "PLANE-DETECTION",
+    "base_url": "https://immersive-web.github.io/plane-detection",
+    "provider": "w3c",
+    "github_repo": "immersive-web/plane-detection"
+  },
+  {
+    "name": "PNG",
+    "base_url": "https://w3c.github.io/png",
+    "provider": "w3c",
+    "github_repo": "w3c/png"
+  },
+  {
+    "name": "POE",
+    "base_url": "https://w3c.github.io/poe",
+    "provider": "w3c",
+    "github_repo": "w3c/poe"
+  },
+  {
+    "name": "POINTER-ANIMATIONS-1",
+    "base_url": "https://drafts.csswg.org/pointer-animations-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "POINTEREVENTS",
+    "base_url": "https://w3c.github.io/pointerevents",
+    "provider": "w3c",
+    "github_repo": "w3c/pointerevents"
+  },
+  {
+    "name": "POINTERLOCK",
+    "base_url": "https://w3c.github.io/pointerlock",
+    "provider": "w3c",
+    "github_repo": "w3c/pointerlock"
+  },
+  {
+    "name": "PORTALS",
+    "base_url": "https://wicg.github.io/portals",
+    "provider": "w3c",
+    "github_repo": "WICG/portals"
+  },
+  {
+    "name": "PRESENTATION-API",
+    "base_url": "https://w3c.github.io/presentation-api",
+    "provider": "w3c",
+    "github_repo": "w3c/presentation-api"
+  },
+  {
+    "name": "PRIVATE-CLICK-MEASUREMENT",
+    "base_url": "https://privacycg.github.io/private-click-measurement",
+    "provider": "w3c",
+    "github_repo": "privacycg/private-click-measurement"
+  },
+  {
+    "name": "PRIVATE-NETWORK-ACCESS",
+    "base_url": "https://wicg.github.io/private-network-access",
+    "provider": "w3c",
+    "github_repo": "WICG/private-network-access"
+  },
+  {
+    "name": "PROMPT-API",
+    "base_url": "https://webmachinelearning.github.io/prompt-api",
+    "provider": "w3c",
+    "github_repo": "webmachinelearning/prompt-api"
+  },
+  {
+    "name": "PROXIMITY",
+    "base_url": "https://w3c.github.io/proximity",
+    "provider": "w3c",
+    "github_repo": "w3c/proximity"
+  },
+  {
+    "name": "PUB-MANIFEST",
+    "base_url": "https://w3c.github.io/pub-manifest",
+    "provider": "w3c",
+    "github_repo": "w3c/pub-manifest"
+  },
+  {
+    "name": "PUBLISHINGCG",
+    "base_url": "https://w3c.github.io/publishingcg",
+    "provider": "w3c",
+    "github_repo": "w3c/publishingcg"
+  },
+  {
+    "name": "PUSH-API",
+    "base_url": "https://w3c.github.io/push-api",
+    "provider": "w3c",
+    "github_repo": "w3c/push-api"
+  },
+  {
+    "name": "PWPUB",
+    "base_url": "https://w3c.github.io/pwpub",
+    "provider": "w3c",
+    "github_repo": "w3c/pwpub"
+  },
+  {
+    "name": "QTSPECS",
+    "base_url": "https://w3c.github.io/qtspecs",
+    "provider": "w3c",
+    "github_repo": "w3c/qtspecs"
+  },
+  {
+    "name": "RAUR",
+    "base_url": "https://w3c.github.io/raur",
+    "provider": "w3c",
+    "github_repo": "w3c/raur"
+  },
+  {
+    "name": "RDF-CANON",
+    "base_url": "https://w3c.github.io/rdf-canon/spec",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-canon"
+  },
+  {
+    "name": "RDF-COMMON",
+    "base_url": "https://w3c.github.io/rdf-common",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-common"
+  },
+  {
+    "name": "RDF-CONCEPTS",
+    "base_url": "https://w3c.github.io/rdf-concepts",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-concepts"
+  },
+  {
+    "name": "RDF-N-QUADS",
+    "base_url": "https://w3c.github.io/rdf-n-quads",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-n-quads"
+  },
+  {
+    "name": "RDF-N-TRIPLES",
+    "base_url": "https://w3c.github.io/rdf-n-triples",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-n-triples"
+  },
+  {
+    "name": "RDF-SCHEMA",
+    "base_url": "https://w3c.github.io/rdf-schema",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-schema"
+  },
+  {
+    "name": "RDF-SEMANTICS",
+    "base_url": "https://w3c.github.io/rdf-semantics",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-semantics"
+  },
+  {
+    "name": "RDF-STAR",
+    "base_url": "https://w3c.github.io/rdf-star",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-star"
+  },
+  {
+    "name": "RDF-TESTS",
+    "base_url": "https://w3c.github.io/rdf-tests",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-tests"
+  },
+  {
+    "name": "RDF-TRIG",
+    "base_url": "https://w3c.github.io/rdf-trig",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-trig"
+  },
+  {
+    "name": "RDF-TURTLE",
+    "base_url": "https://w3c.github.io/rdf-turtle",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-turtle"
+  },
+  {
+    "name": "RDF-XML",
+    "base_url": "https://w3c.github.io/rdf-xml",
+    "provider": "w3c",
+    "github_repo": "w3c/rdf-xml"
+  },
+  {
+    "name": "REAL-WORLD-MESHING",
+    "base_url": "https://immersive-web.github.io/real-world-meshing",
+    "provider": "w3c",
+    "github_repo": "immersive-web/real-world-meshing"
+  },
+  {
+    "name": "REMOTE-PLAYBACK",
+    "base_url": "https://w3c.github.io/remote-playback",
+    "provider": "w3c",
+    "github_repo": "w3c/remote-playback"
+  },
+  {
+    "name": "REPORTING",
+    "base_url": "https://w3c.github.io/reporting",
+    "provider": "w3c",
+    "github_repo": "w3c/reporting"
+  },
+  {
+    "name": "REQUESTIDLECALLBACK",
+    "base_url": "https://w3c.github.io/requestidlecallback",
+    "provider": "w3c",
+    "github_repo": "w3c/requestidlecallback"
+  },
+  {
+    "name": "RESIZE-OBSERVER-1",
+    "base_url": "https://drafts.csswg.org/resize-observer-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "RESOURCE-TIMING",
+    "base_url": "https://w3c.github.io/resource-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/resource-timing"
+  },
+  {
+    "name": "RESPONSIVE-IMAGE-CLIENT-HINTS",
+    "base_url": "https://wicg.github.io/responsive-image-client-hints",
+    "provider": "w3c",
+    "github_repo": "WICG/responsive-image-client-hints"
+  },
+  {
+    "name": "RQTF",
+    "base_url": "https://w3c.github.io/rqtf",
+    "provider": "w3c",
+    "github_repo": "w3c/rqtf"
+  },
+  {
+    "name": "RSP",
+    "base_url": "https://w3c-cg.github.io/rsp",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/rsp"
+  },
+  {
+    "name": "S-AGENT-COMM",
+    "base_url": "https://w3c-cg.github.io/s-agent-comm",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/s-agent-comm"
+  },
+  {
+    "name": "SAA-NON-COOKIE-STORAGE",
+    "base_url": "https://privacycg.github.io/saa-non-cookie-storage",
+    "provider": "w3c",
+    "github_repo": "privacycg/saa-non-cookie-storage"
+  },
+  {
+    "name": "SANITIZER-API",
+    "base_url": "https://wicg.github.io/sanitizer-api",
+    "provider": "w3c",
+    "github_repo": "WICG/sanitizer-api"
+  },
+  {
+    "name": "SAVEDATA",
+    "base_url": "https://wicg.github.io/savedata",
+    "provider": "w3c",
+    "github_repo": "WICG/savedata"
+  },
+  {
+    "name": "SCHEDULING-APIS",
+    "base_url": "https://wicg.github.io/scheduling-apis",
+    "provider": "w3c",
+    "github_repo": "WICG/scheduling-apis"
+  },
+  {
+    "name": "SCREEN-ORIENTATION",
+    "base_url": "https://w3c.github.io/screen-orientation",
+    "provider": "w3c",
+    "github_repo": "w3c/screen-orientation"
+  },
+  {
+    "name": "SCREEN-WAKE-LOCK",
+    "base_url": "https://w3c.github.io/screen-wake-lock",
+    "provider": "w3c",
+    "github_repo": "w3c/screen-wake-lock"
+  },
+  {
+    "name": "SCROLL-ANIMATIONS-1",
+    "base_url": "https://drafts.csswg.org/scroll-animations-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "SDW-SOSA-SSN",
+    "base_url": "https://w3c.github.io/sdw-sosa-ssn",
+    "provider": "w3c",
+    "github_repo": "w3c/sdw-sosa-ssn"
+  },
+  {
+    "name": "SECURE-PAYMENT-CONFIRMATION",
+    "base_url": "https://w3c.github.io/secure-payment-confirmation",
+    "provider": "w3c",
+    "github_repo": "w3c/secure-payment-confirmation"
+  },
+  {
+    "name": "SELECTION-API",
+    "base_url": "https://w3c.github.io/selection-api",
+    "provider": "w3c",
+    "github_repo": "w3c/selection-api"
+  },
+  {
+    "name": "SELECTORS-4",
+    "base_url": "https://drafts.csswg.org/selectors-4",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "SELECTORS-5",
+    "base_url": "https://drafts.csswg.org/selectors-5",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "SELECTORS-NONELEMENT-1",
+    "base_url": "https://drafts.csswg.org/selectors-nonelement-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "SENSORS",
+    "base_url": "https://w3c.github.io/sensors",
+    "provider": "w3c",
+    "github_repo": "w3c/sensors"
+  },
+  {
+    "name": "SERIAL",
+    "base_url": "https://wicg.github.io/serial",
+    "provider": "w3c",
+    "github_repo": "WICG/serial"
+  },
+  {
+    "name": "SERVER-TIMING",
+    "base_url": "https://w3c.github.io/server-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/server-timing"
+  },
+  {
+    "name": "SERVICEWORKER",
+    "base_url": "https://w3c.github.io/ServiceWorker",
+    "provider": "w3c",
+    "github_repo": "w3c/ServiceWorker"
+  },
+  {
+    "name": "SHAPE-DETECTION-API",
+    "base_url": "https://wicg.github.io/shape-detection-api",
+    "provider": "w3c",
+    "github_repo": "WICG/shape-detection-api"
+  },
+  {
+    "name": "SIGNATURE-BASED-SRI",
+    "base_url": "https://wicg.github.io/signature-based-sri",
+    "provider": "w3c",
+    "github_repo": "WICG/signature-based-sri"
+  },
+  {
+    "name": "SMS-ONE-TIME-CODES",
+    "base_url": "https://wicg.github.io/sms-one-time-codes",
+    "provider": "w3c",
+    "github_repo": "WICG/sms-one-time-codes"
+  },
+  {
+    "name": "SMUFL",
+    "base_url": "https://w3c.github.io/smufl/latest",
+    "provider": "w3c",
+    "github_repo": "w3c/smufl"
+  },
+  {
+    "name": "SOFT-NAVIGATIONS",
+    "base_url": "https://wicg.github.io/soft-navigations",
+    "provider": "w3c",
+    "github_repo": "WICG/soft-navigations"
+  },
+  {
+    "name": "SPARQL-DEV",
+    "base_url": "https://w3c.github.io/sparql-dev",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-dev"
+  },
+  {
+    "name": "SPARQL-ENTAILMENT",
+    "base_url": "https://w3c.github.io/sparql-entailment",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-entailment"
+  },
+  {
+    "name": "SPARQL-FEDERATED-QUERY",
+    "base_url": "https://w3c.github.io/sparql-federated-query",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-federated-query"
+  },
+  {
+    "name": "SPARQL-GRAPH-STORE-PROTOCOL",
+    "base_url": "https://w3c.github.io/sparql-graph-store-protocol",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-graph-store-protocol"
+  },
+  {
+    "name": "SPARQL-PROTOCOL",
+    "base_url": "https://w3c.github.io/sparql-protocol",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-protocol"
+  },
+  {
+    "name": "SPARQL-QUERY",
+    "base_url": "https://w3c.github.io/sparql-query",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-query"
+  },
+  {
+    "name": "SPARQL-RESULTS-CSV-TSV",
+    "base_url": "https://w3c.github.io/sparql-results-csv-tsv",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-results-csv-tsv"
+  },
+  {
+    "name": "SPARQL-RESULTS-JSON",
+    "base_url": "https://w3c.github.io/sparql-results-json",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-results-json"
+  },
+  {
+    "name": "SPARQL-RESULTS-XML",
+    "base_url": "https://w3c.github.io/sparql-results-xml",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-results-xml"
+  },
+  {
+    "name": "SPARQL-SERVICE-DESCRIPTION",
+    "base_url": "https://w3c.github.io/sparql-service-description",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-service-description"
+  },
+  {
+    "name": "SPARQL-UPDATE",
+    "base_url": "https://w3c.github.io/sparql-update",
+    "provider": "w3c",
+    "github_repo": "w3c/sparql-update"
+  },
+  {
+    "name": "SPEECH-SYNTHESIS11",
+    "base_url": "https://w3c.github.io/speech-synthesis11",
+    "provider": "w3c",
+    "github_repo": "w3c/speech-synthesis11"
+  },
+  {
+    "name": "STORAGE-ACCESS",
+    "base_url": "https://privacycg.github.io/storage-access",
+    "provider": "w3c",
+    "github_repo": "privacycg/storage-access"
+  },
+  {
+    "name": "STORAGE-ACCESS-HEADERS",
+    "base_url": "https://privacycg.github.io/storage-access-headers",
+    "provider": "w3c",
+    "github_repo": "privacycg/storage-access-headers"
+  },
+  {
+    "name": "STORAGE-BUCKETS",
+    "base_url": "https://wicg.github.io/storage-buckets/explainer",
+    "provider": "w3c",
+    "github_repo": "WICG/storage-buckets"
+  },
+  {
+    "name": "STORAGE-PARTITIONING",
+    "base_url": "https://privacycg.github.io/storage-partitioning",
+    "provider": "w3c",
+    "github_repo": "privacycg/storage-partitioning"
+  },
+  {
+    "name": "SVG-AAM",
+    "base_url": "https://w3c.github.io/svg-aam",
+    "provider": "w3c",
+    "github_repo": "w3c/svg-aam"
+  },
+  {
+    "name": "SVGWG",
+    "base_url": "https://w3c.github.io/svgwg",
+    "provider": "w3c",
+    "github_repo": "w3c/svgwg"
+  },
+  {
+    "name": "SYSTEM-WAKE-LOCK",
+    "base_url": "https://w3c.github.io/system-wake-lock",
+    "provider": "w3c",
+    "github_repo": "w3c/system-wake-lock"
+  },
+  {
+    "name": "TRACE-CONTEXT",
+    "base_url": "https://w3c.github.io/trace-context",
+    "provider": "w3c",
+    "github_repo": "w3c/trace-context"
+  },
+  {
+    "name": "TRACE-INTERCHANGE-FORMAT",
+    "base_url": "https://w3c.github.io/trace-interchange-format",
+    "provider": "w3c",
+    "github_repo": "w3c/trace-interchange-format"
+  },
+  {
+    "name": "TRACE-RESPONSE-HEADERS",
+    "base_url": "https://w3c.github.io/trace-response-headers",
+    "provider": "w3c",
+    "github_repo": "w3c/trace-response-headers"
+  },
+  {
+    "name": "TRANSLATION-API",
+    "base_url": "https://webmachinelearning.github.io/translation-api",
+    "provider": "w3c",
+    "github_repo": "webmachinelearning/translation-api"
+  },
+  {
+    "name": "TRUST-TOKEN-API",
+    "base_url": "https://wicg.github.io/trust-token-api",
+    "provider": "w3c",
+    "github_repo": "WICG/trust-token-api"
+  },
+  {
+    "name": "TRUSTED-TYPES",
+    "base_url": "https://w3c.github.io/trusted-types/dist/spec",
+    "provider": "w3c",
+    "github_repo": "w3c/trusted-types"
+  },
+  {
+    "name": "TT-MODULE-CJK-EXT-1",
+    "base_url": "https://w3c.github.io/tt-module-cjk-ext-1",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-cjk-ext-1"
+  },
+  {
+    "name": "TT-MODULE-CSS",
+    "base_url": "https://w3c.github.io/tt-module-css",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-css"
+  },
+  {
+    "name": "TT-MODULE-KARAOKE",
+    "base_url": "https://w3c.github.io/tt-module-karaoke",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-karaoke"
+  },
+  {
+    "name": "TT-MODULE-LIVE",
+    "base_url": "https://w3c.github.io/tt-module-live/tt-live-1/spec/tt-live.html",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-live"
+  },
+  {
+    "name": "TT-MODULE-REGISTRY",
+    "base_url": "https://w3c.github.io/tt-module-registry",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-registry"
+  },
+  {
+    "name": "TT-MODULE-VR",
+    "base_url": "https://w3c.github.io/tt-module-vr",
+    "provider": "w3c",
+    "github_repo": "w3c/tt-module-vr"
+  },
+  {
+    "name": "TTML1",
+    "base_url": "https://w3c.github.io/ttml1",
+    "provider": "w3c",
+    "github_repo": "w3c/ttml1"
+  },
+  {
+    "name": "TTML2",
+    "base_url": "https://w3c.github.io/ttml2",
+    "provider": "w3c",
+    "github_repo": "w3c/ttml2"
+  },
+  {
+    "name": "TTML3",
+    "base_url": "https://w3c.github.io/ttml3",
+    "provider": "w3c",
+    "github_repo": "w3c/ttml3"
+  },
+  {
+    "name": "UA-CLIENT-HINTS",
+    "base_url": "https://wicg.github.io/ua-client-hints",
+    "provider": "w3c",
+    "github_repo": "WICG/ua-client-hints"
+  },
+  {
+    "name": "UAAG",
+    "base_url": "https://w3c.github.io/UAAG/UAAG20",
+    "provider": "w3c",
+    "github_repo": "w3c/UAAG"
+  },
+  {
+    "name": "UDNA",
+    "base_url": "https://w3c-cg.github.io/udna",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/udna"
+  },
+  {
+    "name": "UHDS",
+    "base_url": "https://w3c-cg.github.io/uhds",
+    "provider": "w3c",
+    "github_repo": "w3c-cg/uhds"
+  },
+  {
+    "name": "UIEVENTS",
+    "base_url": "https://w3c.github.io/uievents",
+    "provider": "w3c",
+    "github_repo": "w3c/uievents"
+  },
+  {
+    "name": "UIEVENTS-CODE",
+    "base_url": "https://w3c.github.io/uievents-code",
+    "provider": "w3c",
+    "github_repo": "w3c/uievents-code"
+  },
+  {
+    "name": "UIEVENTS-KEY",
+    "base_url": "https://w3c.github.io/uievents-key",
+    "provider": "w3c",
+    "github_repo": "w3c/uievents-key"
+  },
+  {
+    "name": "USAGE-AND-CHALLENGES",
+    "base_url": "https://webview-cg.github.io/usage-and-challenges",
+    "provider": "w3c",
+    "github_repo": "WebView-CG/usage-and-challenges"
+  },
+  {
+    "name": "USER-PREFERENCE-MEDIA-FEATURES-HEADERS",
+    "base_url": "https://wicg.github.io/user-preference-media-features-headers",
+    "provider": "w3c",
+    "github_repo": "WICG/user-preference-media-features-headers"
+  },
+  {
+    "name": "USER-TIMING",
+    "base_url": "https://w3c.github.io/user-timing",
+    "provider": "w3c",
+    "github_repo": "w3c/user-timing"
+  },
+  {
+    "name": "VC-BITSTRING-STATUS-LIST",
+    "base_url": "https://w3c.github.io/vc-bitstring-status-list",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-bitstring-status-list"
+  },
+  {
+    "name": "VC-CONFIDENCE-METHOD",
+    "base_url": "https://w3c.github.io/vc-confidence-method",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-confidence-method"
+  },
+  {
+    "name": "VC-DATA-INTEGRITY",
+    "base_url": "https://w3c.github.io/vc-data-integrity",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-data-integrity"
+  },
+  {
+    "name": "VC-DATA-MODEL",
+    "base_url": "https://w3c.github.io/vc-data-model",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-data-model"
+  },
+  {
+    "name": "VC-DI-BBS",
+    "base_url": "https://w3c.github.io/vc-di-bbs",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-di-bbs"
+  },
+  {
+    "name": "VC-DI-ECDSA",
+    "base_url": "https://w3c.github.io/vc-di-ecdsa",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-di-ecdsa"
+  },
+  {
+    "name": "VC-DI-EDDSA",
+    "base_url": "https://w3c.github.io/vc-di-eddsa",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-di-eddsa"
+  },
+  {
+    "name": "VC-JOSE-COSE",
+    "base_url": "https://w3c.github.io/vc-jose-cose",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-jose-cose"
+  },
+  {
+    "name": "VC-JSON-SCHEMA",
+    "base_url": "https://w3c.github.io/vc-json-schema",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-json-schema"
+  },
+  {
+    "name": "VC-JWS-2020",
+    "base_url": "https://w3c.github.io/vc-jws-2020",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-jws-2020"
+  },
+  {
+    "name": "VC-REFRESH",
+    "base_url": "https://w3c-ccg.github.io/vc-refresh",
+    "provider": "w3c",
+    "github_repo": "w3c-ccg/vc-refresh"
+  },
+  {
+    "name": "VC-RENDER-METHOD",
+    "base_url": "https://w3c.github.io/vc-render-method",
+    "provider": "w3c",
+    "github_repo": "w3c/vc-render-method"
+  },
+  {
+    "name": "VIBRATION",
+    "base_url": "https://w3c.github.io/vibration",
+    "provider": "w3c",
+    "github_repo": "w3c/vibration"
+  },
+  {
+    "name": "VIDEO-RVFC",
+    "base_url": "https://wicg.github.io/video-rvfc",
+    "provider": "w3c",
+    "github_repo": "WICG/video-rvfc"
+  },
+  {
+    "name": "VIRTUAL-KEYBOARD",
+    "base_url": "https://w3c.github.io/virtual-keyboard",
+    "provider": "w3c",
+    "github_repo": "w3c/virtual-keyboard"
+  },
+  {
+    "name": "VSSO",
+    "base_url": "https://w3c.github.io/vsso",
+    "provider": "w3c",
+    "github_repo": "w3c/vsso"
+  },
+  {
+    "name": "WCAG",
+    "base_url": "https://w3c.github.io/wcag/guidelines/22",
+    "provider": "w3c",
+    "github_repo": "w3c/wcag"
+  },
+  {
+    "name": "WCAG-ACT",
+    "base_url": "https://w3c.github.io/wcag-act",
+    "provider": "w3c",
+    "github_repo": "w3c/wcag-act"
+  },
+  {
+    "name": "WCAG3",
+    "base_url": "https://w3c.github.io/wcag3/guidelines",
+    "provider": "w3c",
+    "github_repo": "w3c/wcag3"
+  },
+  {
+    "name": "WEB-ANIMATIONS-1",
+    "base_url": "https://drafts.csswg.org/web-animations-1",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "WEB-ANIMATIONS-2",
+    "base_url": "https://drafts.csswg.org/web-animations-2",
+    "provider": "w3c",
+    "github_repo": "w3c/csswg-drafts"
+  },
+  {
+    "name": "WEB-AUDIO-API",
+    "base_url": "https://webaudio.github.io/web-audio-api",
+    "provider": "w3c",
+    "github_repo": "WebAudio/web-audio-api"
+  },
+  {
+    "name": "WEB-BASED-PAYMENT-HANDLER",
+    "base_url": "https://w3c.github.io/web-based-payment-handler",
+    "provider": "w3c",
+    "github_repo": "w3c/web-based-payment-handler"
+  },
+  {
+    "name": "WEB-CERT-API-CG",
+    "base_url": "https://w3c.github.io/web-cert-api-cg/index.html",
+    "provider": "w3c",
+    "github_repo": "w3c/web-cert-api-cg"
+  },
+  {
+    "name": "WEB-LOCKS",
+    "base_url": "https://w3c.github.io/web-locks",
+    "provider": "w3c",
+    "github_repo": "w3c/web-locks"
+  },
+  {
+    "name": "WEB-MIDI-API",
+    "base_url": "https://webaudio.github.io/web-midi-api",
+    "provider": "w3c",
+    "github_repo": "WebAudio/web-midi-api"
+  },
+  {
+    "name": "WEB-NFC",
+    "base_url": "https://w3c.github.io/web-nfc",
+    "provider": "w3c",
+    "github_repo": "w3c/web-nfc"
+  },
+  {
+    "name": "WEB-OTP",
+    "base_url": "https://wicg.github.io/web-otp",
+    "provider": "w3c",
+    "github_repo": "WICG/web-otp"
+  },
+  {
+    "name": "WEB-SHARE",
+    "base_url": "https://w3c.github.io/web-share",
+    "provider": "w3c",
+    "github_repo": "w3c/web-share"
+  },
+  {
+    "name": "WEB-SHARE-TARGET",
+    "base_url": "https://w3c.github.io/web-share-target",
+    "provider": "w3c",
+    "github_repo": "w3c/web-share-target"
+  },
+  {
+    "name": "WEB-SPEECH-API",
+    "base_url": "https://webaudio.github.io/web-speech-api",
+    "provider": "w3c",
+    "github_repo": "WebAudio/web-speech-api"
+  },
+  {
+    "name": "WEBAPPSEC-CHANGE-PASSWORD-URL",
+    "base_url": "https://w3c.github.io/webappsec-change-password-url",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-change-password-url"
+  },
+  {
+    "name": "WEBAPPSEC-CLEAR-SITE-DATA",
+    "base_url": "https://w3c.github.io/webappsec-clear-site-data",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-clear-site-data"
+  },
+  {
+    "name": "WEBAPPSEC-COWL",
+    "base_url": "https://w3c.github.io/webappsec-cowl",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-cowl"
+  },
+  {
+    "name": "WEBAPPSEC-CREDENTIAL-MANAGEMENT",
+    "base_url": "https://w3c.github.io/webappsec-credential-management",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-credential-management"
+  },
+  {
+    "name": "WEBAPPSEC-CSP",
+    "base_url": "https://w3c.github.io/webappsec-csp",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-csp"
+  },
+  {
+    "name": "WEBAPPSEC-CSPEE",
+    "base_url": "https://w3c.github.io/webappsec-cspee",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-cspee"
+  },
+  {
+    "name": "WEBAPPSEC-DBSC",
+    "base_url": "https://w3c.github.io/webappsec-dbsc",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-dbsc"
+  },
+  {
+    "name": "WEBAPPSEC-FETCH-METADATA",
+    "base_url": "https://w3c.github.io/webappsec-fetch-metadata",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-fetch-metadata"
+  },
+  {
+    "name": "WEBAPPSEC-MIXED-CONTENT",
+    "base_url": "https://w3c.github.io/webappsec-mixed-content",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-mixed-content"
+  },
+  {
+    "name": "WEBAPPSEC-PASSKEY-ENDPOINTS",
+    "base_url": "https://w3c.github.io/webappsec-passkey-endpoints",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-passkey-endpoints"
+  },
+  {
+    "name": "WEBAPPSEC-PERMISSIONS-POLICY",
+    "base_url": "https://w3c.github.io/webappsec-permissions-policy",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-permissions-policy"
+  },
+  {
+    "name": "WEBAPPSEC-REFERRER-POLICY",
+    "base_url": "https://w3c.github.io/webappsec-referrer-policy",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-referrer-policy"
+  },
+  {
+    "name": "WEBAPPSEC-SECURE-CONTEXTS",
+    "base_url": "https://w3c.github.io/webappsec-secure-contexts",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-secure-contexts"
+  },
+  {
+    "name": "WEBAPPSEC-STANDARDIZING-SECURITY-SEMANTICS-OF-CROSS-SITE-COOKIES",
+    "base_url": "https://w3c.github.io/webappsec-standardizing-security-semantics-of-cross-site-cookies",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-standardizing-security-semantics-of-cross-site-cookies"
+  },
+  {
+    "name": "WEBAPPSEC-SUBORIGINS",
+    "base_url": "https://w3c.github.io/webappsec-suborigins",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-suborigins"
+  },
+  {
+    "name": "WEBAPPSEC-SUBRESOURCE-INTEGRITY",
+    "base_url": "https://w3c.github.io/webappsec-subresource-integrity",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-subresource-integrity"
+  },
+  {
+    "name": "WEBAPPSEC-UISECURITY",
+    "base_url": "https://w3c.github.io/webappsec-uisecurity",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-uisecurity"
+  },
+  {
+    "name": "WEBAPPSEC-UPGRADE-INSECURE-REQUESTS",
+    "base_url": "https://w3c.github.io/webappsec-upgrade-insecure-requests",
+    "provider": "w3c",
+    "github_repo": "w3c/webappsec-upgrade-insecure-requests"
+  },
+  {
+    "name": "WEBAUTHN",
+    "base_url": "https://w3c.github.io/webauthn",
+    "provider": "w3c",
+    "github_repo": "w3c/webauthn"
+  },
+  {
+    "name": "WEBCODECS",
+    "base_url": "https://w3c.github.io/webcodecs",
+    "provider": "w3c",
+    "github_repo": "w3c/webcodecs"
+  },
+  {
+    "name": "WEBCOMPONENTS-CG",
+    "base_url": "https://w3c.github.io/webcomponents-cg",
+    "provider": "w3c",
+    "github_repo": "w3c/webcomponents-cg"
+  },
+  {
+    "name": "WEBCRYPTO",
+    "base_url": "https://w3c.github.io/webcrypto",
+    "provider": "w3c",
+    "github_repo": "w3c/webcrypto"
+  },
+  {
+    "name": "WEBCRYPTO-MODERN-ALGOS",
+    "base_url": "https://wicg.github.io/webcrypto-modern-algos",
+    "provider": "w3c",
+    "github_repo": "WICG/webcrypto-modern-algos"
+  },
+  {
+    "name": "WEBDRIVER",
+    "base_url": "https://w3c.github.io/webdriver",
+    "provider": "w3c",
+    "github_repo": "w3c/webdriver"
+  },
+  {
+    "name": "WEBDRIVER-BIDI",
+    "base_url": "https://w3c.github.io/webdriver-bidi",
+    "provider": "w3c",
+    "github_repo": "w3c/webdriver-bidi"
+  },
+  {
+    "name": "WEBEXTENSIONS",
+    "base_url": "https://w3c.github.io/webextensions",
+    "provider": "w3c",
+    "github_repo": "w3c/webextensions"
+  },
+  {
+    "name": "WEBHID",
+    "base_url": "https://wicg.github.io/webhid",
+    "provider": "w3c",
+    "github_repo": "WICG/webhid"
+  },
+  {
+    "name": "WEBID",
+    "base_url": "https://w3c.github.io/WebID",
+    "provider": "w3c",
+    "github_repo": "w3c/WebID"
+  },
+  {
+    "name": "WEBMCP",
+    "base_url": "https://webmachinelearning.github.io/webmcp",
+    "provider": "w3c",
+    "github_repo": "webmachinelearning/webmcp"
+  },
+  {
+    "name": "WEBMEDIAAPI",
+    "base_url": "https://w3c.github.io/webmediaapi",
+    "provider": "w3c",
+    "github_repo": "w3c/webmediaapi"
+  },
+  {
+    "name": "WEBMEDIAGUIDELINES",
+    "base_url": "https://w3c.github.io/webmediaguidelines",
+    "provider": "w3c",
+    "github_repo": "w3c/webmediaguidelines"
+  },
+  {
+    "name": "WEBMENTION",
+    "base_url": "https://w3c.github.io/webmention",
+    "provider": "w3c",
+    "github_repo": "w3c/webmention"
+  },
+  {
+    "name": "WEBRTC-ENCODED-TRANSFORM",
+    "base_url": "https://w3c.github.io/webrtc-encoded-transform",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-encoded-transform"
+  },
+  {
+    "name": "WEBRTC-EXTENSIONS",
+    "base_url": "https://w3c.github.io/webrtc-extensions",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-extensions"
+  },
+  {
+    "name": "WEBRTC-ICE",
+    "base_url": "https://w3c.github.io/webrtc-ice",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-ice"
+  },
+  {
+    "name": "WEBRTC-IDENTITY",
+    "base_url": "https://w3c.github.io/webrtc-identity",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-identity"
+  },
+  {
+    "name": "WEBRTC-PC",
+    "base_url": "https://w3c.github.io/webrtc-pc",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-pc"
+  },
+  {
+    "name": "WEBRTC-PRIORITY",
+    "base_url": "https://w3c.github.io/webrtc-priority",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-priority"
+  },
+  {
+    "name": "WEBRTC-PROVISIONAL-STATS",
+    "base_url": "https://w3c.github.io/webrtc-provisional-stats",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-provisional-stats"
+  },
+  {
+    "name": "WEBRTC-RTPTRANSPORT",
+    "base_url": "https://w3c.github.io/webrtc-rtptransport",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-rtptransport"
+  },
+  {
+    "name": "WEBRTC-STATS",
+    "base_url": "https://w3c.github.io/webrtc-stats",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-stats"
+  },
+  {
+    "name": "WEBRTC-SVC",
+    "base_url": "https://w3c.github.io/webrtc-svc",
+    "provider": "w3c",
+    "github_repo": "w3c/webrtc-svc"
+  },
+  {
+    "name": "WEBSUB",
+    "base_url": "https://w3c.github.io/websub",
+    "provider": "w3c",
+    "github_repo": "w3c/websub"
+  },
+  {
+    "name": "WEBTRANSPORT",
+    "base_url": "https://w3c.github.io/webtransport",
+    "provider": "w3c",
+    "github_repo": "w3c/webtransport"
+  },
+  {
+    "name": "WEBUSB",
+    "base_url": "https://wicg.github.io/webusb",
+    "provider": "w3c",
+    "github_repo": "WICG/webusb"
+  },
+  {
+    "name": "WEBVIEW-DEFINITION",
+    "base_url": "https://webview-cg.github.io/webview-definition",
+    "provider": "w3c",
+    "github_repo": "WebView-CG/webview-definition"
+  },
+  {
+    "name": "WEBVTT",
+    "base_url": "https://w3c.github.io/webvtt",
+    "provider": "w3c",
+    "github_repo": "w3c/webvtt"
+  },
+  {
+    "name": "WEBXR",
+    "base_url": "https://immersive-web.github.io/webxr",
+    "provider": "w3c",
+    "github_repo": "immersive-web/webxr"
+  },
+  {
+    "name": "WEBXR-AR-MODULE",
+    "base_url": "https://immersive-web.github.io/webxr-ar-module",
+    "provider": "w3c",
+    "github_repo": "immersive-web/webxr-ar-module"
+  },
+  {
+    "name": "WEBXR-GAMEPADS-MODULE",
+    "base_url": "https://immersive-web.github.io/webxr-gamepads-module",
+    "provider": "w3c",
+    "github_repo": "immersive-web/webxr-gamepads-module"
+  },
+  {
+    "name": "WEBXR-HAND-INPUT",
+    "base_url": "https://immersive-web.github.io/webxr-hand-input",
+    "provider": "w3c",
+    "github_repo": "immersive-web/webxr-hand-input"
+  },
+  {
+    "name": "WINDOW-CONTROLS-OVERLAY",
+    "base_url": "https://wicg.github.io/window-controls-overlay",
+    "provider": "w3c",
+    "github_repo": "WICG/window-controls-overlay"
+  },
+  {
+    "name": "WINDOW-MANAGEMENT",
+    "base_url": "https://w3c.github.io/window-management",
+    "provider": "w3c",
+    "github_repo": "w3c/window-management"
+  },
+  {
+    "name": "WOFF",
+    "base_url": "https://w3c.github.io/woff/woff2",
+    "provider": "w3c",
+    "github_repo": "w3c/woff"
+  },
+  {
+    "name": "WOT-ARCHITECTURE",
+    "base_url": "https://w3c.github.io/wot-architecture",
+    "provider": "w3c",
+    "github_repo": "w3c/wot-architecture"
+  },
+  {
+    "name": "WOT-DISCOVERY",
+    "base_url": "https://w3c.github.io/wot-discovery",
+    "provider": "w3c",
+    "github_repo": "w3c/wot-discovery"
+  },
+  {
+    "name": "WOT-PROFILE",
+    "base_url": "https://w3c.github.io/wot-profile",
+    "provider": "w3c",
+    "github_repo": "w3c/wot-profile"
+  },
+  {
+    "name": "WOT-THING-DESCRIPTION",
+    "base_url": "https://w3c.github.io/wot-thing-description",
+    "provider": "w3c",
+    "github_repo": "w3c/wot-thing-description"
+  },
+  {
+    "name": "WPUB",
+    "base_url": "https://w3c.github.io/wpub",
+    "provider": "w3c",
+    "github_repo": "w3c/wpub"
+  },
+  {
+    "name": "WPUB-ANN",
+    "base_url": "https://w3c.github.io/wpub-ann",
+    "provider": "w3c",
+    "github_repo": "w3c/wpub-ann"
+  },
+  {
+    "name": "WRITING-ASSISTANCE-APIS",
+    "base_url": "https://webmachinelearning.github.io/writing-assistance-apis",
+    "provider": "w3c",
+    "github_repo": "webmachinelearning/writing-assistance-apis"
+  },
+  {
+    "name": "XAUR",
+    "base_url": "https://w3c.github.io/xaur",
+    "provider": "w3c",
+    "github_repo": "w3c/xaur"
+  },
+  {
+    "name": "XINCLUDE",
+    "base_url": "https://w3c.github.io/xinclude",
+    "provider": "w3c",
+    "github_repo": "w3c/xinclude"
+  },
+  {
+    "name": "XML-ENTITIES",
+    "base_url": "https://w3c.github.io/xml-entities",
+    "provider": "w3c",
+    "github_repo": "w3c/xml-entities"
+  },
+  {
+    "name": "YAML-LD",
+    "base_url": "https://w3c.github.io/yaml-ld",
+    "provider": "w3c",
+    "github_repo": "w3c/yaml-ld"
+  }
+]

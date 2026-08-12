@@ -1,0 +1,32 @@
+{
+  "name": "webspec-tracer",
+  "version": "0.1.0",
+  "description": "Firefox extension for creating traces from web specifications",
+  "license": "MIT",
+  "author": "Andreas Farre",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "dev": "node esbuild.mjs --watch --run",
+    "start": "web-ext run",
+    "lint:ext": "web-ext lint --source-dir dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run test/unit",
+    "parity": "vitest run test/parity"
+  },
+  "dependencies": {
+    "turndown": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/turndown": "^5.0.5",
+    "@types/firefox-webext-browser": "^120.0.4",
+    "esbuild": "^0.24.2",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8",
+    "web-ext": "^8.3.0"
+  }
+}
