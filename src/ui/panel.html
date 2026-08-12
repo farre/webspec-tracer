@@ -9,15 +9,16 @@
   <body>
     <header><h1>webspec-tracer</h1></header>
     <main>
-      <form id="trace-form">
-        <label class="field">
-          Mode
-          <select id="mode">
-            <option value="path">Path (A → B)</option>
-            <option value="outgoing">Outgoing tree</option>
-          </select>
-        </label>
+      <label class="field">
+        Mode
+        <select id="mode">
+          <option value="path">Path (A → B)</option>
+          <option value="outgoing">Outgoing tree</option>
+          <option value="interactive">Interactive</option>
+        </select>
+      </label>
 
+      <form id="trace-form">
         <div id="path-fields">
           <label class="field">
             From
@@ -36,8 +37,26 @@
           </label>
         </div>
 
+        <div id="interactive-fields" hidden>
+          <label class="field">
+            Start
+            <input id="start" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+        </div>
+
         <button type="submit" id="generate">Generate</button>
       </form>
+
+      <!-- Interactive step-through -->
+      <section id="interactive-view" hidden>
+        <div class="crumbs">
+          <button id="back" type="button">← Back</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+        <p id="current" class="current"></p>
+        <p class="hint">Calls from here (click to add to the trace):</p>
+        <ul id="edges" class="edges"></ul>
+      </section>
 
       <div class="actions">
         <button id="insert" disabled>Insert into Bugzilla</button>

@@ -27,6 +27,12 @@ export interface PathTraceRequest {
 
 export type TraceRequest = OutgoingTraceRequest | PathTraceRequest;
 
+/** Ask for a node's outgoing edges (for the interactive step-through). */
+export interface EdgesRequest {
+  kind: "edges";
+  ref: string;
+}
+
 /** Sent to the active Bugzilla tab's content script to insert text at the caret. */
 export interface InsertRequest {
   kind: "insert";
@@ -39,7 +45,25 @@ export interface PingRequest {
   payload?: string;
 }
 
-export type Request = TraceRequest | InsertRequest | PingRequest;
+export type Request = TraceRequest | EdgesRequest | InsertRequest | PingRequest;
+
+/** One outgoing edge from a node, for the interactive step-through. */
+export interface EdgeInfo {
+  toSpec: string;
+  toAnchor: string;
+  title: string | null;
+  baseUrl: string | null;
+  callSiteIds: string[];
+}
+
+export interface EdgesResponse {
+  kind: "edges";
+  spec: string;
+  anchor: string;
+  title: string | null;
+  baseUrl: string | null;
+  edges: EdgeInfo[];
+}
 
 export interface PingResponse {
   kind: "ping";
@@ -66,4 +90,9 @@ export interface ErrorResponse {
   message: string;
 }
 
-export type Response = PingResponse | TraceResponse | InsertResponse | ErrorResponse;
+export type Response =
+  | PingResponse
+  | TraceResponse
+  | EdgesResponse
+  | InsertResponse
+  | ErrorResponse;

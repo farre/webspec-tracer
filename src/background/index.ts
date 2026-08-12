@@ -6,7 +6,7 @@
  * Kept side-effect-free at module top level (only registers a listener) so the
  * same code can run as an MV3 event page later. See docs/design.md.
  */
-import type { Request, Response, TraceRequest } from "./messages.js";
+import type { EdgeInfo, EdgesRequest, Request, Response, TraceRequest } from "./messages.js";
 import { loadRegistry } from "../registry/specs-data.js";
 import type { Registry } from "../registry/registry.js";
 import { MemorySpecStore } from "../store/memory-store.js";
@@ -92,6 +92,37 @@ async function handleTrace(req: TraceRequest): Promise<Response> {
   return { kind: "trace", text: renderPath(chain, baseUrlFor, header) };
 }
 
+async function handleEdges(req: EdgesRequest): Promise<Response> {
+  const registry = await getRegistry();
+  const ep = resolveEndpoint(req.ref, registry);
+  if (!ep) return { kind: "error", message: `could not resolve "${req.ref}" (use SPEC#anchor)` };
+
+  // getOutgoingRefs triggers a lazy fetch of the spec via LazyStore.
+  const refs = await store.getOutgoingRefs(ep.spec, ep.anchor);
+  const nodeMeta = await store.getNodeMeta(ep.spec, ep.anchor);
+
+  const edges: EdgeInfo[] = [];
+  for (const r of refs) {
+    const meta = await store.getNodeMeta(r.toSpec, r.toAnchor);
+    edges.push({
+      toSpec: r.toSpec,
+      toAnchor: r.toAnchor,
+      title: meta?.title ?? null,
+      baseUrl: registry.baseUrlForSpec(r.toSpec),
+      callSiteIds: r.callSiteIds,
+    });
+  }
+
+  return {
+    kind: "edges",
+    spec: ep.spec,
+    anchor: ep.anchor,
+    title: nodeMeta?.title ?? null,
+    baseUrl: registry.baseUrlForSpec(ep.spec),
+    edges,
+  };
+}
+
 async function handle(req: Request): Promise<Response> {
   try {
     switch (req.kind) {
@@ -99,6 +130,8 @@ async function handle(req: Request): Promise<Response> {
         return { kind: "ping", ok: true, echo: req.payload };
       case "trace":
         return await handleTrace(req);
+      case "edges":
+        return await handleEdges(req);
       default:
         return { kind: "error", message: `unknown request: ${JSON.stringify(req)}` };
     }
