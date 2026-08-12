@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="panel.css" />
+    <title>webspec-tracer</title>
+  </head>
+  <body>
+    <header><h1>webspec-tracer</h1></header>
+    <main>
+      <label class="field">
+        Mode
+        <select id="mode">
+          <option value="path">Path (A → B)</option>
+          <option value="outgoing">Outgoing tree</option>
+          <option value="interactive">Interactive</option>
+        </select>
+      </label>
+
+      <form id="trace-form">
+        <div id="path-fields">
+          <label class="field">
+            From
+            <input id="from" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+          <label class="field">
+            To
+            <input id="to" type="text" placeholder="#navigate, DOM#concept-node, or URL" />
+          </label>
+        </div>
+
+        <div id="outgoing-fields" hidden>
+          <label class="field">
+            Anchor
+            <input id="ref" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+        </div>
+
+        <div id="interactive-fields" hidden>
+          <label class="field">
+            Start
+            <input id="start" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+        </div>
+
+        <button type="submit" id="generate">Generate</button>
+      </form>
+
+      <!-- Interactive step-through -->
+      <section id="interactive-view" hidden>
+        <div class="crumbs">
+          <button id="back" type="button">← Back</button>
+        </div>
+        <p id="current" class="current"></p>
+        <p class="hint">Click a highlighted call to add it to the trace.</p>
+        <div id="steps" class="steps"></div>
+        <div id="calls-fallback" hidden>
+          <p class="hint">Calls from here:</p>
+          <ul id="edges" class="edges"></ul>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="insert" disabled>Insert into Bugzilla</button>
+        <button id="copy" disabled>Copy</button>
+        <button id="reset" type="button">Reset</button>
+      </div>
+
+      <p id="status" class="hint" aria-live="polite"></p>
+      <pre id="out" aria-live="polite"></pre>
+    </main>
+    <script src="panel.js"></script>
+  </body>
+</html>
