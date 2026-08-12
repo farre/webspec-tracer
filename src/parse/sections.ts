@@ -4,12 +4,12 @@
  *
  * Section extraction: classifies id'd headings and `<dfn>`s into
  * Heading/Algorithm/Definition/Idl sections and computes the parent/prev/next
- * tree. M1 covers the WHATWG path (headings + dfns); ecmarkup/W3C-anchor/IETF
- * variants and full algorithm rendering land in M3.
+ * tree. Each section keeps both its source HTML (for spec-faithful rendering)
+ * and a markdown rendering. M1 covers the WHATWG path (headings + dfns);
+ * ecmarkup/W3C-anchor/IETF variants and full algorithm rendering land in M3.
  */
 import type { ParsedSection, SectionType } from "../model/types.js";
 import type TurndownService from "turndown";
-import { elementToMarkdown } from "./markdown.js";
 import { hasClass, headingDepth, tag } from "./dom.js";
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -49,10 +49,7 @@ function isInsideAlgorithmContent(element: Element): boolean {
   while (cur) {
     if (tag(cur) === "ol" || tag(cur) === "ul") {
       const list = cur;
-      // Pattern 1: list inside div.algorithm / div[data-algorithm].
       if (findAncestor(list, isAlgorithmDiv)) return true;
-
-      // Pattern 2: Wattsi sibling — a preceding p/dd/li block containing a dfn[id].
       let prev: Element | null = list.previousElementSibling;
       while (prev) {
         const name = tag(prev);
@@ -89,14 +86,10 @@ function isInsideAlgorithmDiv(element: Element): boolean {
   return false;
 }
 
-// ── content extraction ─────────────────────────────────────────────────────
+// ── content extraction (returns source HTML; markdown is derived) ────────────
 
-/** Mirror of `extract_heading_content`: prose between a heading and the next section. */
-function extractHeadingContent(
-  heading: Element,
-  currentDepth: number,
-  td: TurndownService,
-): string | null {
+/** Source HTML between a heading and the next section (heading or dfn). */
+function headingContentHtml(heading: Element, currentDepth: number): string | null {
   let html = "";
   let sib: Element | null = heading.nextElementSibling;
   while (sib) {
@@ -107,10 +100,50 @@ function extractHeadingContent(
     html += sib.outerHTML;
     sib = sib.nextElementSibling;
   }
-  if (!html.trim()) return null;
+  return html.trim() ? html : null;
+}
+
+/** Source HTML of the block enclosing a definition dfn. */
+function definitionContentHtml(el: Element): string | null {
+  const block = findAncestor(el, (e) =>
+    ["p", "div", "dd", "dt", "li", "section"].includes(tag(e)),
+  );
+  return block ? block.outerHTML : null;
+}
+
+/** Source HTML of an algorithm: the enclosing algorithm div, or the intro block
+ * plus its following list. */
+function algorithmContentHtml(el: Element): string | null {
+  const div = findAncestor(el, isAlgorithmDiv);
+  if (div) return div.outerHTML;
+
+  const intro = findAncestor(el, (e) => ["p", "dd", "li"].includes(tag(e)));
+  if (!intro) return null;
+  let html = intro.outerHTML;
+  for (let sib = intro.nextElementSibling; sib; sib = sib.nextElementSibling) {
+    const name = tag(sib);
+    if (name === "ol" || name === "ul" || name === "dl") {
+      html += sib.outerHTML;
+      break;
+    }
+    if (BLOCK_STOP.has(name)) break;
+  }
+  return html;
+}
+
+/** The enclosing `<pre>` of an IDL definition. */
+function idlPre(el: Element): Element | null {
+  return findAncestor(el, (e) => tag(e) === "pre");
+}
+
+/** Markdown rendering of an HTML fragment, or null when empty. */
+function toMarkdown(html: string | null, td: TurndownService): string | null {
+  if (!html) return null;
   const md = td.turndown(html).trim();
   return md || null;
 }
+
+// ── title extraction ─────────────────────────────────────────────────────────
 
 /** Mirror of `extract_heading_title`: text minus secno/secnum/self-link children. */
 function extractHeadingTitle(el: Element): string | null {
@@ -128,45 +161,6 @@ function extractHeadingTitle(el: Element): string | null {
   return result || null;
 }
 
-/** Definition content: nearest enclosing block-level element rendered to markdown. */
-function extractDefinitionContent(el: Element, td: TurndownService): string | null {
-  const block = findAncestor(el, (e) =>
-    ["p", "div", "dd", "dt", "li", "section"].includes(tag(e)),
-  );
-  if (block) return elementToMarkdown(block, td);
-  return (el.textContent ?? "").trim() || null;
-}
-
-/** Algorithm content (simplified for M1): the enclosing algorithm div, or the
- * intro block plus its following list, rendered via turndown. */
-function extractAlgorithmContent(el: Element, td: TurndownService): string | null {
-  const div = findAncestor(el, isAlgorithmDiv);
-  if (div) return elementToMarkdown(div, td);
-
-  const intro = findAncestor(el, (e) => ["p", "dd", "li"].includes(tag(e)));
-  if (intro) {
-    let html = intro.outerHTML;
-    let sib: Element | null = intro.nextElementSibling;
-    while (sib) {
-      const name = tag(sib);
-      if (name === "ol" || name === "ul" || name === "dl") {
-        html += sib.outerHTML;
-        break;
-      }
-      if (BLOCK_STOP.has(name)) break;
-      sib = sib.nextElementSibling;
-    }
-    return td.turndown(html).trim() || null;
-  }
-  return null;
-}
-
-/** IDL content: text of the enclosing `<pre>`. */
-function extractIdlContent(el: Element): string | null {
-  const pre = findAncestor(el, (e) => tag(e) === "pre");
-  return pre ? (pre.textContent ?? "").trim() || null : null;
-}
-
 // ── element parsers ────────────────────────────────────────────────────────
 
 /** Mirror of `parse_heading_element`. */
@@ -175,10 +169,12 @@ export function parseHeadingElement(el: Element, td: TurndownService): ParsedSec
   if (!anchor) return null;
   const depth = headingDepth(tag(el));
   if (depth === null) return null;
+  const contentHtml = headingContentHtml(el, depth);
   return {
     anchor,
     title: extractHeadingTitle(el),
-    contentText: extractHeadingContent(el, depth, td),
+    contentText: toMarkdown(contentHtml, td),
+    contentHtml,
     sectionType: "heading",
     parentAnchor: null,
     prevAnchor: null,
@@ -207,15 +203,25 @@ export function parseDfnElement(el: Element, td: TurndownService): ParsedSection
   else if (isIdlType(el)) sectionType = "idl";
   else sectionType = "definition";
 
+  let contentHtml: string | null = null;
   let contentText: string | null = null;
-  if (sectionType === "definition") contentText = extractDefinitionContent(el, td);
-  else if (sectionType === "algorithm") contentText = extractAlgorithmContent(el, td);
-  else if (sectionType === "idl") contentText = extractIdlContent(el);
+  if (sectionType === "definition") {
+    contentHtml = definitionContentHtml(el);
+    contentText = contentHtml ? toMarkdown(contentHtml, td) : (el.textContent ?? "").trim() || null;
+  } else if (sectionType === "algorithm") {
+    contentHtml = algorithmContentHtml(el);
+    contentText = toMarkdown(contentHtml, td);
+  } else {
+    const pre = idlPre(el);
+    contentHtml = pre ? pre.outerHTML : null;
+    contentText = pre ? (pre.textContent ?? "").trim() || null : null;
+  }
 
   return {
     anchor,
     title,
     contentText,
+    contentHtml,
     sectionType,
     parentAnchor: null,
     prevAnchor: null,

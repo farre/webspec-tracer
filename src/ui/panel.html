@@ -54,8 +54,12 @@
           <button id="reset" type="button">Reset</button>
         </div>
         <p id="current" class="current"></p>
-        <p class="hint">Calls from here (click to add to the trace):</p>
-        <ul id="edges" class="edges"></ul>
+        <p class="hint">Click a highlighted call to add it to the trace.</p>
+        <div id="steps" class="steps"></div>
+        <div id="calls-fallback" hidden>
+          <p class="hint">Calls from here:</p>
+          <ul id="edges" class="edges"></ul>
+        </div>
       </section>
 
       <div class="actions">

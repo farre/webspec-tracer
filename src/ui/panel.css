@@ -75,3 +75,31 @@ pre {
   text-align: left;
   padding: 0.3rem 0.5rem;
 }
+.steps {
+  max-height: 45vh;
+  overflow: auto;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.steps :is(ol, ul) {
+  padding-left: 1.4rem;
+  margin: 0.25rem 0;
+}
+.steps a {
+  color: inherit;
+  text-decoration: underline dotted;
+}
+/* In-algorithm calls: highlighted and clickable to descend. */
+.steps a.call {
+  text-decoration: none;
+  background: rgba(64, 128, 255, 0.18);
+  border-radius: 3px;
+  padding: 0 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.steps a.call:hover {
+  background: rgba(64, 128, 255, 0.35);
+}

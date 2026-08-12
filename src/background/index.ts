@@ -99,7 +99,7 @@ async function handleEdges(req: EdgesRequest): Promise<Response> {
 
   // getOutgoingRefs triggers a lazy fetch of the spec via LazyStore.
   const refs = await store.getOutgoingRefs(ep.spec, ep.anchor);
-  const nodeMeta = await store.getNodeMeta(ep.spec, ep.anchor);
+  const section = await store.getSection(ep.spec, ep.anchor);
 
   const edges: EdgeInfo[] = [];
   for (const r of refs) {
@@ -117,8 +117,10 @@ async function handleEdges(req: EdgesRequest): Promise<Response> {
     kind: "edges",
     spec: ep.spec,
     anchor: ep.anchor,
-    title: nodeMeta?.title ?? null,
+    title: section?.title ?? null,
+    type: section?.sectionType ?? null,
     baseUrl: registry.baseUrlForSpec(ep.spec),
+    contentHtml: section?.contentHtml ?? null,
     edges,
   };
 }

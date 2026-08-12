@@ -18,6 +18,8 @@ export interface ParsedSection {
   anchor: string;
   title: string | null;
   contentText: string | null;
+  /** Source HTML of the section body, for spec-faithful rendering in the UI. */
+  contentHtml: string | null;
   sectionType: SectionType;
   parentAnchor: string | null;
   prevAnchor: string | null;

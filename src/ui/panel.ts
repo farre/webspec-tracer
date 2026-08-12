@@ -28,6 +28,8 @@ const status = $<HTMLParagraphElement>("status");
 const out = $<HTMLPreElement>("out");
 const interactiveView = $<HTMLElement>("interactive-view");
 const currentEl = $<HTMLParagraphElement>("current");
+const stepsEl = $<HTMLDivElement>("steps");
+const callsFallback = $<HTMLDivElement>("calls-fallback");
 const edgesEl = $<HTMLUListElement>("edges");
 const backBtn = $<HTMLButtonElement>("back");
 const resetBtn = $<HTMLButtonElement>("reset");
@@ -123,10 +125,77 @@ async function showNode(spec: string, anchor: string) {
   renderNode(res);
 }
 
+/** Strip anything script-like from spec HTML before injecting it. */
+function sanitize(container: HTMLElement) {
+  container.querySelectorAll("script,style,iframe,object,embed,link,meta").forEach((e) => e.remove());
+  for (const e of container.querySelectorAll("*")) {
+    for (const attr of [...e.attributes]) {
+      if (attr.name.startsWith("on")) e.removeAttribute(attr.name);
+    }
+  }
+}
+
 function renderNode(res: EdgesResponse) {
   baseMap.set(res.spec, res.baseUrl);
-  currentEl.textContent = res.title ? `${res.spec}#${res.anchor} — ${res.title}` : `${res.spec}#${res.anchor}`;
+  for (const edge of res.edges) baseMap.set(edge.toSpec, edge.baseUrl);
+  currentEl.textContent = res.title
+    ? `${res.spec}#${res.anchor} — ${res.title}`
+    : `${res.spec}#${res.anchor}`;
 
+  // Map each call-site id to its edge, so a link in the steps can descend.
+  const byCallSite = new Map<string, (typeof res.edges)[number]>();
+  for (const edge of res.edges) {
+    for (const id of edge.callSiteIds) byCallSite.set(id, edge);
+  }
+
+  const clickable = renderSteps(res, byCallSite);
+  stepsEl.hidden = !clickable;
+  callsFallback.hidden = clickable;
+  if (!clickable) renderEdgeList(res);
+}
+
+/** Render the section's source HTML with in-algorithm calls clickable. Returns
+ * true if it produced at least one clickable call. */
+function renderSteps(
+  res: EdgesResponse,
+  byCallSite: Map<string, (typeof res.edges)[number]>,
+): boolean {
+  stepsEl.textContent = "";
+  if (!res.contentHtml) return false;
+
+  // Parse in an inert document (no script execution), then adopt the nodes —
+  // avoids assigning untrusted HTML to innerHTML.
+  const parsed = new DOMParser().parseFromString(res.contentHtml, "text/html");
+  const container = document.createElement("div");
+  while (parsed.body.firstChild) container.appendChild(parsed.body.firstChild);
+  sanitize(container);
+
+  let clickable = 0;
+  for (const a of container.querySelectorAll("a")) {
+    const id = a.getAttribute("id");
+    const edge = id ? byCallSite.get(id) : undefined;
+    const href = a.getAttribute("href");
+    if (href?.startsWith("#") && res.baseUrl) a.setAttribute("href", `${res.baseUrl}${href}`);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+    if (edge) {
+      clickable++;
+      a.classList.add("call");
+      a.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        void addHop(edge.toSpec, edge.toAnchor, edge.title, edge.callSiteIds);
+      });
+    }
+  }
+
+  if (clickable === 0) return false;
+  stepsEl.appendChild(container);
+  return true;
+}
+
+/** Fallback: a compact list of outgoing calls (used when there are no clickable
+ * in-algorithm calls in the rendered steps, e.g. for non-algorithm nodes). */
+function renderEdgeList(res: EdgesResponse) {
   edgesEl.textContent = "";
   if (res.edges.length === 0) {
     const li = document.createElement("li");
@@ -136,7 +205,6 @@ function renderNode(res: EdgesResponse) {
     return;
   }
   for (const edge of res.edges) {
-    baseMap.set(edge.toSpec, edge.baseUrl);
     const li = document.createElement("li");
     const btn = document.createElement("button");
     btn.type = "button";
@@ -192,6 +260,7 @@ resetBtn.addEventListener("click", () => {
   chain = [];
   interactiveView.hidden = true;
   edgesEl.textContent = "";
+  stepsEl.textContent = "";
   currentEl.textContent = "";
   setResult("");
   status.textContent = "";

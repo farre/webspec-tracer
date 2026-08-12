@@ -6,7 +6,7 @@
  * Endpoints are raw strings resolved in the background: `SPEC#anchor`, a full
  * spec URL, or `#anchor`/`anchor` (interpreted against the start's spec).
  */
-import type { GraphResult } from "../model/types.js";
+import type { GraphResult, SectionType } from "../model/types.js";
 
 /** Outgoing call-tree from a single anchor. */
 export interface OutgoingTraceRequest {
@@ -61,7 +61,10 @@ export interface EdgesResponse {
   spec: string;
   anchor: string;
   title: string | null;
+  type: SectionType | null;
   baseUrl: string | null;
+  /** Source HTML of the node's body, for spec-faithful rendering. */
+  contentHtml: string | null;
   edges: EdgeInfo[];
 }
 
