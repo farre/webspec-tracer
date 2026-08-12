@@ -8,9 +8,43 @@
   </head>
   <body>
     <header><h1>webspec-tracer</h1></header>
-    <main id="app">
-      <p class="hint">M0 scaffold. Trace &amp; browse UI arrives in M1/M4.</p>
-      <button id="ping">Ping background</button>
+    <main>
+      <form id="trace-form">
+        <label class="field">
+          Mode
+          <select id="mode">
+            <option value="path">Path (A → B)</option>
+            <option value="outgoing">Outgoing tree</option>
+          </select>
+        </label>
+
+        <div id="path-fields">
+          <label class="field">
+            From
+            <input id="from" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+          <label class="field">
+            To
+            <input id="to" type="text" placeholder="#navigate, DOM#concept-node, or URL" />
+          </label>
+        </div>
+
+        <div id="outgoing-fields" hidden>
+          <label class="field">
+            Anchor
+            <input id="ref" type="text" placeholder="HTML#dom-location-assign" />
+          </label>
+        </div>
+
+        <button type="submit" id="generate">Generate</button>
+      </form>
+
+      <div class="actions">
+        <button id="insert" disabled>Insert into Bugzilla</button>
+        <button id="copy" disabled>Copy</button>
+      </div>
+
+      <p id="status" class="hint" aria-live="polite"></p>
       <pre id="out" aria-live="polite"></pre>
     </main>
     <script src="panel.js"></script>

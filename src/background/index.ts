@@ -10,21 +10,26 @@ import type { Request, Response, TraceRequest } from "./messages.js";
 import { loadRegistry } from "../registry/specs-data.js";
 import type { Registry } from "../registry/registry.js";
 import { MemorySpecStore } from "../store/memory-store.js";
+import { LazyStore } from "../store/lazy-store.js";
 import { fetchSpecHtml } from "../store/fetcher.js";
 import { parseSpec } from "../parse/parse-spec.js";
+import { resolveEndpoint } from "../registry/endpoint.js";
 import { outgoingTrace, pathTrace } from "../tracer/trace.js";
 import { chainToTree, renderTree } from "../render/trace-render.js";
 
 const FRESH_MS = 24 * 60 * 60 * 1000;
 
-const store = new MemorySpecStore();
+const base = new MemorySpecStore();
 let registryPromise: Promise<Registry> | null = null;
 const getRegistry = (): Promise<Registry> => (registryPromise ??= loadRegistry());
 
-/** Ensure a spec's parsed model is in the store, fetching + parsing on a miss. */
-async function ensureSpec(specName: string): Promise<Registry> {
+// De-duplicate concurrent/repeat fetches of the same spec.
+const inFlight = new Map<string, Promise<void>>();
+
+/** Fetch + parse + store a spec if it isn't already fresh. */
+async function fetchAndStore(specName: string): Promise<void> {
   const registry = await getRegistry();
-  if (await store.isFresh(specName, FRESH_MS)) return registry;
+  if (await base.isFresh(specName, FRESH_MS)) return;
 
   const baseUrl = registry.baseUrlForSpec(specName);
   if (!baseUrl) throw new Error(`unknown spec: ${specName}`);
@@ -32,7 +37,7 @@ async function ensureSpec(specName: string): Promise<Registry> {
   const { html, sha } = await fetchSpecHtml(baseUrl);
   const doc = new DOMParser().parseFromString(html, "text/html");
   const parsed = parseSpec(doc, specName, baseUrl, registry);
-  await store.putSpec({
+  await base.putSpec({
     specName,
     baseUrl,
     contentSha: sha,
@@ -40,34 +45,51 @@ async function ensureSpec(specName: string): Promise<Registry> {
     fetchedAt: Date.now(),
     parsed,
   });
-  return registry;
 }
 
+/** Ensure a spec is present, coalescing duplicate in-flight fetches. */
+function ensureSpec(specName: string): Promise<void> {
+  let p = inFlight.get(specName);
+  if (!p) {
+    p = fetchAndStore(specName).finally(() => inFlight.delete(specName));
+    inFlight.set(specName, p);
+  }
+  return p;
+}
+
+// The tracer reads through the lazy layer, which fetches specs on demand as a
+// trace crosses `to_spec` boundaries.
+const store = new LazyStore(base, ensureSpec);
+
 async function handleTrace(req: TraceRequest): Promise<Response> {
-  const registry = await ensureSpec(req.spec);
+  const registry = await getRegistry();
   const baseUrlFor = (s: string) => registry.baseUrlForSpec(s);
 
   if (req.mode === "outgoing") {
+    const ep = resolveEndpoint(req.ref, registry);
+    if (!ep) return { kind: "error", message: `could not resolve "${req.ref}" (use SPEC#anchor)` };
     const { graph, tree } = await outgoingTrace(store, {
-      rootSpec: req.spec,
-      rootAnchor: req.anchor,
+      rootSpec: ep.spec,
+      rootAnchor: ep.anchor,
       sameSpecOnly: true,
       maxDepth: req.maxDepth,
       maxNodes: req.maxNodes,
     });
-    const header = `Spec trace: ${req.spec}#${req.anchor} (outgoing, depth ${graph.maxDepth})`;
+    const header = `Spec trace: ${ep.spec}#${ep.anchor} (outgoing, depth ${graph.maxDepth})`;
     return { kind: "trace", graph, text: renderTree(tree, baseUrlFor, header) };
   }
 
   // path mode
-  if (!req.toSpec || !req.toAnchor) {
-    return { kind: "error", message: "path trace requires toSpec and toAnchor" };
-  }
-  await ensureSpec(req.toSpec);
-  const chain = await pathTrace(store, req.spec, req.anchor, req.toSpec, req.toAnchor);
-  if (!chain) return { kind: "error", message: "no path found" };
+  const from = resolveEndpoint(req.from, registry);
+  if (!from) return { kind: "error", message: `could not resolve start "${req.from}" (use SPEC#anchor)` };
+  const to = resolveEndpoint(req.to, registry, from.spec);
+  if (!to) return { kind: "error", message: `could not resolve end "${req.to}"` };
+
+  // LazyStore fetches specs as pathTrace crosses into them.
+  const chain = await pathTrace(store, from.spec, from.anchor, to.spec, to.anchor);
+  if (!chain) return { kind: "error", message: "no path found between those anchors" };
   const tree = chainToTree(chain)!;
-  const header = `Spec trace: ${req.spec}#${req.anchor} → ${req.toSpec}#${req.toAnchor}`;
+  const header = `Spec trace: ${from.spec}#${from.anchor} → ${to.spec}#${to.anchor}`;
   return { kind: "trace", text: renderTree(tree, baseUrlFor, header) };
 }
 

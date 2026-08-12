@@ -1,30 +1,45 @@
 /**
- * Typed request/response protocol between the UI/content scripts and the
- * background page. The background owns the SpecStore and does all fetch+parse.
+ * Typed request/response protocol. The UI and content scripts talk to the
+ * background (which owns the SpecStore and does all fetch+parse); the sidebar
+ * also asks the active Bugzilla tab's content script to insert rendered text.
+ *
+ * Endpoints are raw strings resolved in the background: `SPEC#anchor`, a full
+ * spec URL, or `#anchor`/`anchor` (interpreted against the start's spec).
  */
 import type { GraphResult } from "../model/types.js";
 
-export type TraceMode = "outgoing" | "path";
-
-export interface TraceRequest {
+/** Outgoing call-tree from a single anchor. */
+export interface OutgoingTraceRequest {
   kind: "trace";
-  spec: string;
-  anchor: string;
-  mode: TraceMode;
-  /** For mode === "path". */
-  toSpec?: string;
-  toAnchor?: string;
+  mode: "outgoing";
+  ref: string;
   maxDepth?: number;
   maxNodes?: number;
 }
 
-/** Simple connectivity check used by the M0 scaffold. */
+/** Shortest path between two anchors. */
+export interface PathTraceRequest {
+  kind: "trace";
+  mode: "path";
+  from: string;
+  to: string;
+}
+
+export type TraceRequest = OutgoingTraceRequest | PathTraceRequest;
+
+/** Sent to the active Bugzilla tab's content script to insert text at the caret. */
+export interface InsertRequest {
+  kind: "insert";
+  text: string;
+}
+
+/** Connectivity check. */
 export interface PingRequest {
   kind: "ping";
   payload?: string;
 }
 
-export type Request = TraceRequest | PingRequest;
+export type Request = TraceRequest | InsertRequest | PingRequest;
 
 export interface PingResponse {
   kind: "ping";
@@ -40,9 +55,15 @@ export interface TraceResponse {
   text: string;
 }
 
+export interface InsertResponse {
+  kind: "insert";
+  ok: boolean;
+  message?: string;
+}
+
 export interface ErrorResponse {
   kind: "error";
   message: string;
 }
 
-export type Response = PingResponse | TraceResponse | ErrorResponse;
+export type Response = PingResponse | TraceResponse | InsertResponse | ErrorResponse;
