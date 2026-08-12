@@ -6,7 +6,7 @@
  * The rendered trace can be inserted into the active Bugzilla tab or copied.
  */
 import { send } from "./api.js";
-import type { EdgesResponse, InsertResponse, TraceRequest } from "../background/messages.js";
+import type { EdgesResponse, TraceRequest } from "../background/messages.js";
 import type { TraceNode } from "../tracer/trace.js";
 import { renderPath } from "../render/trace-render.js";
 
@@ -295,19 +295,15 @@ form.addEventListener("submit", async (e) => {
 
 insertBtn.addEventListener("click", async () => {
   if (!lastText) return;
-  const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-  if (!tab?.id) {
-    status.textContent = "No active tab.";
-    return;
-  }
   try {
-    const res = (await browser.tabs.sendMessage(tab.id, {
-      kind: "insert",
-      text: lastText,
-    })) as InsertResponse;
-    status.textContent = res.ok ? "Inserted." : res.message ?? "Insert failed.";
-  } catch {
-    status.textContent = "Focus a text field on a bugzilla.mozilla.org page first.";
+    const res = await send({ kind: "insert", text: lastText });
+    if (res.kind === "insert") {
+      status.textContent = res.ok ? "Inserted." : res.message ?? "Insert failed.";
+    } else if (res.kind === "error") {
+      status.textContent = res.message;
+    }
+  } catch (e) {
+    status.textContent = e instanceof Error ? e.message : String(e);
   }
 });
 

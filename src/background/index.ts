@@ -125,6 +125,22 @@ async function handleEdges(req: EdgesRequest): Promise<Response> {
   };
 }
 
+async function handleInsert(text: string): Promise<Response> {
+  const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+  if (!tab?.id) return { kind: "insert", ok: false, message: "no active tab" };
+  try {
+    // Ensure the content script is present (idempotent), then hand it the text.
+    await browser.tabs.executeScript(tab.id, { file: "content-bugzilla.js" });
+    return (await browser.tabs.sendMessage(tab.id, { kind: "insert", text })) as Response;
+  } catch {
+    return {
+      kind: "insert",
+      ok: false,
+      message: "open a bugzilla.mozilla.org page and click a text field",
+    };
+  }
+}
+
 async function handle(req: Request): Promise<Response> {
   try {
     switch (req.kind) {
@@ -134,6 +150,8 @@ async function handle(req: Request): Promise<Response> {
         return await handleTrace(req);
       case "edges":
         return await handleEdges(req);
+      case "insert":
+        return await handleInsert(req.text);
       default:
         return { kind: "error", message: `unknown request: ${JSON.stringify(req)}` };
     }
