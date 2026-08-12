@@ -10,7 +10,7 @@
     "build": "node esbuild.mjs",
     "watch": "node esbuild.mjs --watch",
     "dev": "node esbuild.mjs --watch --run",
-    "start": "web-ext run",
+    "start": "web-ext run --source-dir dist",
     "lint:ext": "web-ext lint --source-dir dist",
     "typecheck": "tsc --noEmit",
     "test": "vitest run test/unit",

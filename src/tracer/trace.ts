@@ -18,30 +18,35 @@ export interface TraceNode {
 
 const nodeId = (spec: string, anchor: string) => `${spec}#${anchor}`;
 
-/** Build a call-tree (no cycles) rooted at the graph's root, following directed edges. */
-export function treeFromGraph(graph: GraphResult): TraceNode {
+/**
+ * Build a call-tree (no cycles) rooted at the graph's root. Children follow the
+ * order the references appear in the spec source (from the store's outgoing
+ * refs), not the graph's alphabetical edge sort — so the trace reads as an
+ * actual call sequence. The graph's node set bounds the tree (depth/node caps).
+ */
+export async function treeFromGraph(
+  store: SpecStore,
+  graph: GraphResult,
+): Promise<TraceNode> {
   const byId = new Map<string, GraphNode>(graph.nodes.map((n) => [n.id, n]));
-  const adjacency = new Map<string, string[]>();
-  for (const e of graph.edges) {
-    (adjacency.get(e.from) ?? adjacency.set(e.from, []).get(e.from)!).push(e.to);
-  }
-
-  const rootId = nodeId(graph.root.spec, graph.root.anchor);
+  const inGraph = new Set(byId.keys());
   const visited = new Set<string>();
 
-  const build = (id: string): TraceNode => {
+  const build = async (spec: string, anchor: string): Promise<TraceNode> => {
+    const id = nodeId(spec, anchor);
     visited.add(id);
     const n = byId.get(id);
-    const spec = n?.spec ?? graph.root.spec;
-    const anchor = n?.anchor ?? graph.root.anchor;
     const children: TraceNode[] = [];
-    for (const to of adjacency.get(id) ?? []) {
-      if (!visited.has(to)) children.push(build(to));
+    for (const r of await store.getOutgoingRefs(spec, anchor)) {
+      const cid = nodeId(r.toSpec, r.toAnchor);
+      if (inGraph.has(cid) && !visited.has(cid)) {
+        children.push(await build(r.toSpec, r.toAnchor));
+      }
     }
     return { id, spec, anchor, title: n?.title ?? null, children };
   };
 
-  return build(rootId);
+  return build(graph.root.spec, graph.root.anchor);
 }
 
 /** Outgoing call-tree trace: returns both the raw graph and the tree. */
@@ -50,7 +55,7 @@ export async function outgoingTrace(
   opts: GraphOptions,
 ): Promise<{ graph: GraphResult; tree: TraceNode }> {
   const graph = await buildGraph(store, { ...opts, direction: "outgoing" });
-  return { graph, tree: treeFromGraph(graph) };
+  return { graph, tree: await treeFromGraph(store, graph) };
 }
 
 /** Shortest outgoing path from a start anchor to a target anchor, or null. */
