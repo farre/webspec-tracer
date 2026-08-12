@@ -9,7 +9,7 @@ specs and inserts them into the Bugzilla comment editor, and also offers a sideb
 for browsing spec sections, cross-references, and IDL.
 
 It builds the spec cross-reference graph lazily in the browser (`fetch` + `DOMParser`
-+ IndexedDB) — no bundled database, no WASM, no backend. See [docs/design.md](docs/design.md)
+\+ IndexedDB) — no bundled database, no WASM, no backend. See [docs/design.md](docs/design.md)
 for the full architecture.
 
 ## Development
