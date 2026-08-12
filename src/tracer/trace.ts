@@ -14,6 +14,12 @@ export interface TraceNode {
   anchor: string;
   title: string | null;
   children: TraceNode[];
+  /**
+   * For path traces: the call-site ids of the edge that led into this node (the
+   * source `<a>`s' ids in the previous node's section), used to link to each
+   * exact call site rather than this node's definition.
+   */
+  viaCallSiteIds?: string[];
 }
 
 const nodeId = (spec: string, anchor: string) => `${spec}#${anchor}`;
@@ -70,6 +76,7 @@ export async function pathTrace(
   const start = nodeId(fromSpec, fromAnchor);
   const goal = nodeId(toSpec, toAnchor);
   const parent = new Map<string, string>();
+  const viaCallSites = new Map<string, string[]>();
   const seen = new Set<string>([start]);
   const queue: Array<[string, string]> = [[fromSpec, fromAnchor]];
 
@@ -83,6 +90,7 @@ export async function pathTrace(
       if (!seen.has(nid)) {
         seen.add(nid);
         parent.set(nid, id);
+        viaCallSites.set(nid, r.callSiteIds);
         queue.push([r.toSpec, r.toAnchor]);
       }
     }
@@ -103,7 +111,14 @@ export async function pathTrace(
   for (const id of ids) {
     const [spec, anchor] = id.split("#") as [string, string];
     const meta = await store.getNodeMeta(spec, anchor);
-    chain.push({ id, spec, anchor, title: meta?.title ?? null, children: [] });
+    chain.push({
+      id,
+      spec,
+      anchor,
+      title: meta?.title ?? null,
+      children: [],
+      viaCallSiteIds: viaCallSites.get(id) ?? [],
+    });
   }
   return chain;
 }

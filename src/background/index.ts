@@ -15,7 +15,7 @@ import { fetchSpecHtml } from "../store/fetcher.js";
 import { parseSpec } from "../parse/parse-spec.js";
 import { resolveEndpoint } from "../registry/endpoint.js";
 import { outgoingTrace, pathTrace } from "../tracer/trace.js";
-import { chainToTree, renderTree } from "../render/trace-render.js";
+import { renderPath, renderTree } from "../render/trace-render.js";
 
 const FRESH_MS = 24 * 60 * 60 * 1000;
 
@@ -88,9 +88,8 @@ async function handleTrace(req: TraceRequest): Promise<Response> {
   // LazyStore fetches specs as pathTrace crosses into them.
   const chain = await pathTrace(store, from.spec, from.anchor, to.spec, to.anchor);
   if (!chain) return { kind: "error", message: "no path found between those anchors" };
-  const tree = chainToTree(chain)!;
   const header = `Spec trace: ${from.spec}#${from.anchor} → ${to.spec}#${to.anchor}`;
-  return { kind: "trace", text: renderTree(tree, baseUrlFor, header) };
+  return { kind: "trace", text: renderPath(chain, baseUrlFor, header) };
 }
 
 async function handle(req: Request): Promise<Response> {

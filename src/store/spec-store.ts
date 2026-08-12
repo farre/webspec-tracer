@@ -68,6 +68,7 @@ export class SpecIndex {
         fromAnchor: r.fromAnchor,
         toSpec: r.toSpec,
         toAnchor: r.toAnchor,
+        callSiteIds: r.callSiteIds,
       };
       const outKey = key(specName, r.fromAnchor);
       (this.outgoing.get(outKey) ?? this.outgoing.set(outKey, []).get(outKey)!).push(edge);

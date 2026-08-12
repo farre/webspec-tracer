@@ -6,7 +6,7 @@
 import { describe, expect, it } from "vitest";
 import { parseHtml, storeFrom } from "../helpers.js";
 import { outgoingTrace, pathTrace } from "../../src/tracer/trace.js";
-import { renderTree } from "../../src/render/trace-render.js";
+import { renderPath, renderTree } from "../../src/render/trace-render.js";
 
 const CHAIN_HTML = `
   <h2 id="nav">Navigation</h2>
@@ -31,8 +31,8 @@ describe("references — algorithm chain", () => {
   it("attributes intra-spec links to their algorithm scope", () => {
     const { references } = parseHtml(CHAIN_HTML);
     expect(references).toEqual([
-      { fromAnchor: "a-assign", toSpec: "TEST", toAnchor: "a-navigate" },
-      { fromAnchor: "a-navigate", toSpec: "TEST", toAnchor: "a-check" },
+      { fromAnchor: "a-assign", toSpec: "TEST", toAnchor: "a-navigate", callSiteIds: [] },
+      { fromAnchor: "a-navigate", toSpec: "TEST", toAnchor: "a-check", callSiteIds: [] },
     ]);
   });
 });
@@ -81,9 +81,45 @@ describe("path trace", () => {
     expect(chain?.map((n) => n.anchor)).toEqual(["a-assign", "a-navigate", "a-check"]);
   });
 
+  it("renders a flat 'A calls B' numbered list", async () => {
+    const store = await storeFrom(CHAIN_HTML);
+    const chain = await pathTrace(store, "TEST", "a-assign", "TEST", "a-check");
+    const text = renderPath(chain!, () => "https://test.example.com");
+    expect(text).toBe(
+      [
+        "1. [#a-assign](https://test.example.com#a-assign) calls [#a-navigate](https://test.example.com#a-navigate)",
+        "2. [#a-navigate](https://test.example.com#a-navigate) calls [#a-check](https://test.example.com#a-check)",
+      ].join("\n"),
+    );
+  });
+
   it("returns null when no path exists", async () => {
     const store = await storeFrom(CHAIN_HTML);
     const chain = await pathTrace(store, "TEST", "a-check", "TEST", "a-assign");
     expect(chain).toBeNull();
+  });
+
+  it("links the callee to every call site inside the caller's section", async () => {
+    const html = `
+      <div class="algorithm" data-algorithm="assign">
+        <p>To <dfn id="a-assign">assign(url)</dfn>:</p>
+        <ol>
+          <li>Do <a href="#a-navigate" id="the-loc:navigate-9">navigate</a>.</li>
+          <li>Maybe <a href="#a-navigate" id="the-loc:navigate-10">navigate</a> again.</li>
+        </ol>
+      </div>
+      <div class="algorithm" data-algorithm="navigate">
+        <p>To <dfn id="a-navigate">navigate</dfn>:</p>
+        <ol><li>Return.</li></ol>
+      </div>`;
+    const store = await storeFrom(html);
+    const chain = await pathTrace(store, "TEST", "a-assign", "TEST", "a-navigate");
+    const text = renderPath(chain!, () => "https://test.example.com");
+    // caller → canonical def; callee → first call site as label, extras as [[2]].
+    expect(text).toBe(
+      "1. [#a-assign](https://test.example.com#a-assign) calls " +
+        "[#a-navigate](https://test.example.com#the-loc:navigate-9), " +
+        "[[2]](https://test.example.com#the-loc:navigate-10)",
+    );
   });
 });

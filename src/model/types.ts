@@ -32,6 +32,14 @@ export interface ParsedReference {
   /** Target spec name (same as source for intra-spec refs). */
   toSpec: string;
   toAnchor: string;
+  /**
+   * Ids of every source `<a>` element for this from→to pair (the call sites
+   * inside `fromAnchor`'s section, e.g.
+   * `the-location-interface:location-object-navigate-9`), in document order.
+   * Lets a trace link to each exact step where the call happens rather than the
+   * target's definition. Extends webspec-index's model.
+   */
+  callSiteIds: string[];
 }
 
 /** A parsed WebIDL definition from `dfn[data-dfn-type]`. Mirrors `ParsedIdlDefinition`. */
@@ -57,6 +65,8 @@ export interface RefEdge {
   fromAnchor: string;
   toSpec: string;
   toAnchor: string;
+  /** Ids of the source `<a>`s (call sites in fromAnchor's section), in order. */
+  callSiteIds: string[];
 }
 
 /** Minimal label info for a graph node. */
