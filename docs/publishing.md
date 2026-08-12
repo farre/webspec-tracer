@@ -67,8 +67,8 @@ Paste this into the AMO review notes if asked to justify permissions.
 
 - `storage`, `unlimitedStorage` — cache parsed specs locally (a single spec's
   parsed content can be large); nothing is sent anywhere.
-- `https://bugzilla.mozilla.org/*` — the only user-facing integration: insert a
-  generated trace into the bug comment editor at the caret.
+- `https://bugzilla.mozilla.org/*`, `https://github.com/*` — insert a generated
+  trace into the comment editor (the focused text field) at the caret.
 - Spec sources, fetched on demand to build the cross-reference graph as a trace
   crosses into a spec:
   - `https://*.spec.whatwg.org/*` — WHATWG living standards (HTML, DOM, URL, Fetch…)

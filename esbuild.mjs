@@ -14,7 +14,7 @@ const outdir = "dist";
 
 const entryPoints = {
   background: "src/background/index.ts",
-  "content-bugzilla": "src/content/bugzilla.ts",
+  "comment-insert": "src/content/comment-insert.ts",
   panel: "src/ui/panel.ts",
 };
 

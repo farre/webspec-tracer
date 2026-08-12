@@ -130,7 +130,7 @@ async function handleInsert(text: string): Promise<Response> {
   if (!tab?.id) return { kind: "insert", ok: false, message: "no active tab" };
   try {
     // Ensure the content script is present (idempotent), then hand it the text.
-    await browser.tabs.executeScript(tab.id, { file: "content-bugzilla.js" });
+    await browser.tabs.executeScript(tab.id, { file: "comment-insert.js" });
     return (await browser.tabs.sendMessage(tab.id, { kind: "insert", text })) as Response;
   } catch {
     return {

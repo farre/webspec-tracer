@@ -9,6 +9,7 @@
  */
 const HOST_PERMISSIONS = [
   "https://bugzilla.mozilla.org/*", // insert generated traces into the comment box
+  "https://github.com/*", // insert traces into GitHub issue/PR comments
   "https://*.spec.whatwg.org/*", // WHATWG living standards (HTML, DOM, URL, Fetch…)
   "https://tc39.es/*", // TC39 / ECMAScript specs and proposals
   "https://*.github.io/*", // W3C/WICG/GPUWeb/WebAssembly editor's drafts
@@ -22,8 +23,8 @@ const HOST_PERMISSIONS = [
 
 const CONTENT_SCRIPTS = [
   {
-    matches: ["https://bugzilla.mozilla.org/*"],
-    js: ["content-bugzilla.js"],
+    matches: ["https://bugzilla.mozilla.org/*", "https://github.com/*"],
+    js: ["comment-insert.js"],
   },
 ];
 

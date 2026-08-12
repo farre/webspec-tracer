@@ -1,8 +1,8 @@
 /**
- * Content script for bugzilla.mozilla.org. Inserts a trace (generated in the
- * sidebar) into the text field the user last focused — the comment box, or any
- * other textarea / contenteditable on the page — in response to an `insert`
- * message. All trace UI lives in the sidebar panel.
+ * Content script for sites where generated traces are inserted (Bugzilla,
+ * GitHub, …). It inserts a trace into the text field the user last focused — a
+ * comment box or any other textarea / contenteditable — in response to an
+ * `insert` message. All trace UI lives in the sidebar panel.
  *
  * Auto-injected via content_scripts, and also injected on demand by the
  * background before an insert; the guard below keeps that idempotent.
@@ -14,6 +14,15 @@ declare global {
     __webspecTracerReady?: boolean;
   }
 }
+
+/** Known comment-box selectors, used only when nothing has been focused yet. */
+const FALLBACK_SELECTORS = [
+  "textarea#comment", // Bugzilla
+  'textarea[name="comment"]',
+  'textarea[name="comment[body]"]', // GitHub issues/PRs
+  "#new_comment_field",
+  "textarea.comment-form-textarea",
+];
 
 if (!window.__webspecTracerReady) {
   window.__webspecTracerReady = true;
@@ -30,9 +39,8 @@ if (!window.__webspecTracerReady) {
     }
   });
 
-  // Fallback target when nothing has been focused yet: the comment box.
   const fallbackTarget = (): Editable | null => {
-    for (const sel of ["textarea#comment", 'textarea[name="comment"]']) {
+    for (const sel of FALLBACK_SELECTORS) {
       const el = document.querySelector<HTMLTextAreaElement>(sel);
       if (el) return el;
     }
