@@ -1,0 +1,424 @@
+{
+  "root": {
+    "spec": "HTML",
+    "anchor": "dom-location-assign"
+  },
+  "direction": "outgoing",
+  "max_depth": 2,
+  "max_nodes": 150,
+  "truncated": false,
+  "nodes": [
+    {
+      "id": "HTML#active-document",
+      "spec": "HTML",
+      "anchor": "active-document",
+      "title": "active document",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#api-base-url",
+      "spec": "HTML",
+      "anchor": "api-base-url"
+    },
+    {
+      "id": "HTML#completely-loaded",
+      "spec": "HTML",
+      "anchor": "completely-loaded",
+      "title": "completely loaded",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#concept-document-window",
+      "spec": "HTML",
+      "anchor": "concept-document-window",
+      "title": "associated\n  Document",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#concept-entry-realm",
+      "spec": "HTML",
+      "anchor": "concept-entry-realm",
+      "title": "entry\n  realm",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#concept-incumbent-global",
+      "spec": "HTML",
+      "anchor": "concept-incumbent-global",
+      "title": "incumbent global object",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#concept-origin-domain",
+      "spec": "HTML",
+      "anchor": "concept-origin-domain"
+    },
+    {
+      "id": "HTML#concept-origin-opaque",
+      "spec": "HTML",
+      "anchor": "concept-origin-opaque",
+      "title": "opaque origin",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#concept-origin-scheme",
+      "spec": "HTML",
+      "anchor": "concept-origin-scheme"
+    },
+    {
+      "id": "HTML#concept-origin-tuple",
+      "spec": "HTML",
+      "anchor": "concept-origin-tuple",
+      "title": "tuple origin",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#concept-realm-settings-object",
+      "spec": "HTML",
+      "anchor": "concept-realm-settings-object"
+    },
+    {
+      "id": "HTML#concept-relevant-global",
+      "spec": "HTML",
+      "anchor": "concept-relevant-global",
+      "title": "relevant global object",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#concept-settings-object-origin",
+      "spec": "HTML",
+      "anchor": "concept-settings-object-origin"
+    },
+    {
+      "id": "HTML#document",
+      "spec": "HTML",
+      "anchor": "document",
+      "title": "Document",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#document-base-url",
+      "spec": "HTML",
+      "anchor": "document-base-url",
+      "title": "document base URL",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#dom-location-assign",
+      "spec": "HTML",
+      "anchor": "dom-location-assign",
+      "title": "assign(url)",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#encoding-parsing-a-url",
+      "spec": "HTML",
+      "anchor": "encoding-parsing-a-url",
+      "title": "encoding-parse a URL",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#entry-settings-object",
+      "spec": "HTML",
+      "anchor": "entry-settings-object",
+      "title": "entry settings object",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#environment-settings-object",
+      "spec": "HTML",
+      "anchor": "environment-settings-object",
+      "title": "environment settings object",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#exceptions-enabled",
+      "spec": "HTML",
+      "anchor": "exceptions-enabled"
+    },
+    {
+      "id": "HTML#location",
+      "spec": "HTML",
+      "anchor": "location",
+      "title": "Location",
+      "type": "idl"
+    },
+    {
+      "id": "HTML#location-object-navigate",
+      "spec": "HTML",
+      "anchor": "location-object-navigate",
+      "title": "Location-object navigate",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#navigate",
+      "spec": "HTML",
+      "anchor": "navigate",
+      "title": "navigate",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#navigation-hh",
+      "spec": "HTML",
+      "anchor": "navigation-hh"
+    },
+    {
+      "id": "HTML#navigationhistorybehavior",
+      "spec": "HTML",
+      "anchor": "navigationhistorybehavior",
+      "title": "NavigationHistoryBehavior",
+      "type": "idl"
+    },
+    {
+      "id": "HTML#navigationhistorybehavior-auto",
+      "spec": "HTML",
+      "anchor": "navigationhistorybehavior-auto",
+      "title": "auto",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#navigationhistorybehavior-replace",
+      "spec": "HTML",
+      "anchor": "navigationhistorybehavior-replace",
+      "title": "replace",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#relevant-document",
+      "spec": "HTML",
+      "anchor": "relevant-document",
+      "title": "relevant Document",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#same-origin",
+      "spec": "HTML",
+      "anchor": "same-origin",
+      "title": "same origin",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#same-origin-domain",
+      "spec": "HTML",
+      "anchor": "same-origin-domain",
+      "title": "same origin-domain",
+      "type": "algorithm"
+    },
+    {
+      "id": "HTML#transient-activation",
+      "spec": "HTML",
+      "anchor": "transient-activation",
+      "title": "Transient activation",
+      "type": "definition"
+    },
+    {
+      "id": "HTML#window",
+      "spec": "HTML",
+      "anchor": "window",
+      "title": "Window",
+      "type": "idl"
+    },
+    {
+      "id": "HTML#window-bc",
+      "spec": "HTML",
+      "anchor": "window-bc"
+    },
+    {
+      "id": "HTML#window-navigable",
+      "spec": "HTML",
+      "anchor": "window-navigable"
+    }
+  ],
+  "edges": [
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#concept-settings-object-origin",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#encoding-parsing-a-url",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#entry-settings-object",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#location-object-navigate",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#relevant-document",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#dom-location-assign",
+      "to": "HTML#same-origin-domain",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#api-base-url",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#concept-document-window",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#concept-relevant-global",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#document",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#document-base-url",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#environment-settings-object",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#encoding-parsing-a-url",
+      "to": "HTML#window",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#entry-settings-object",
+      "to": "HTML#concept-entry-realm",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#entry-settings-object",
+      "to": "HTML#concept-realm-settings-object",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#completely-loaded",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#concept-document-window",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#concept-incumbent-global",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#concept-relevant-global",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#exceptions-enabled",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#location",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#navigate",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#navigation-hh",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#navigationhistorybehavior",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#navigationhistorybehavior-auto",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#navigationhistorybehavior-replace",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#relevant-document",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#transient-activation",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#location-object-navigate",
+      "to": "HTML#window-navigable",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#relevant-document",
+      "to": "HTML#active-document",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#relevant-document",
+      "to": "HTML#concept-relevant-global",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#relevant-document",
+      "to": "HTML#location",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#relevant-document",
+      "to": "HTML#window-bc",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#same-origin-domain",
+      "to": "HTML#concept-origin-domain",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#same-origin-domain",
+      "to": "HTML#concept-origin-opaque",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#same-origin-domain",
+      "to": "HTML#concept-origin-scheme",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#same-origin-domain",
+      "to": "HTML#concept-origin-tuple",
+      "kind": "reference"
+    },
+    {
+      "from": "HTML#same-origin-domain",
+      "to": "HTML#same-origin",
+      "kind": "reference"
+    }
+  ]
+}

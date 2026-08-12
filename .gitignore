@@ -3,3 +3,7 @@ dist/
 web-ext-artifacts/
 *.log
 .DS_Store
+
+# Large spec HTML fixtures are fetched on demand (see test/fixtures/refresh.mjs);
+# only the small CLI goldens are committed.
+test/fixtures/html/

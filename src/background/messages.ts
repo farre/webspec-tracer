@@ -34,7 +34,8 @@ export interface PingResponse {
 
 export interface TraceResponse {
   kind: "trace";
-  graph: GraphResult;
+  /** Present for outgoing call-tree traces; omitted for path traces. */
+  graph?: GraphResult;
   /** Rendered numbered-list text ready to paste into Bugzilla. */
   text: string;
 }
