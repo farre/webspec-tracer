@@ -2,18 +2,22 @@
 // MV2 is the default (persistent background page, install-time host permissions).
 // Plain JS so it can be imported by the node-run build script. See docs/design.md.
 
-/** Host permissions: Bugzilla plus the spec sources the registry can resolve. */
+/**
+ * Host permissions: Bugzilla (to insert traces into the comment editor) plus the
+ * spec sources the registry resolves and fetches on demand to build the graph.
+ * Rationale for each is documented in docs/publishing.md ("Permissions").
+ */
 const HOST_PERMISSIONS = [
-  "https://bugzilla.mozilla.org/*",
-  "https://*.spec.whatwg.org/*",
-  "https://tc39.es/*",
-  "https://*.github.io/*",
-  "https://drafts.csswg.org/*",
-  "https://www.w3.org/*",
-  "https://w3.org/*",
-  "https://www.rfc-editor.org/*",
-  "https://datatracker.ietf.org/*",
-  "https://www.ietf.org/*",
+  "https://bugzilla.mozilla.org/*", // insert generated traces into the comment box
+  "https://*.spec.whatwg.org/*", // WHATWG living standards (HTML, DOM, URL, Fetch…)
+  "https://tc39.es/*", // TC39 / ECMAScript specs and proposals
+  "https://*.github.io/*", // W3C/WICG/GPUWeb/WebAssembly editor's drafts
+  "https://drafts.csswg.org/*", // CSS WG drafts
+  "https://www.w3.org/*", // W3C /TR/ specs and the ReSpec spec-generator
+  "https://w3.org/*", // W3C (bare host)
+  "https://www.rfc-editor.org/*", // IETF RFCs
+  "https://datatracker.ietf.org/*", // IETF drafts
+  "https://www.ietf.org/*", // IETF
 ];
 
 const CONTENT_SCRIPTS = [
@@ -23,23 +27,30 @@ const CONTENT_SCRIPTS = [
   },
 ];
 
-/** @param {"mv2"|"mv3"} target */
-export function buildManifest(target) {
+const ICONS = { 48: "icon.svg", 96: "icon.svg", 128: "icon.svg" };
+
+/**
+ * @param {"mv2"|"mv3"} target
+ * @param {string} version  from package.json (single source of truth)
+ */
+export function buildManifest(target, version = "0.0.0") {
   const base = {
     name: "webspec-tracer",
-    version: "0.1.0",
+    version,
     description: "Create traces from web specifications.",
     browser_specific_settings: {
       gecko: {
-        id: "webspec-tracer@mozilla.org",
+        id: "webspec-tracer@farre.se",
         // The extension sends no user data anywhere; it only fetches public
         // specs and caches them locally.
         data_collection_permissions: { required: ["none"] },
       },
     },
+    icons: ICONS,
     sidebar_action: {
       default_title: "webspec-tracer",
       default_panel: "panel.html",
+      default_icon: "icon.svg",
     },
     content_scripts: CONTENT_SCRIPTS,
   };

@@ -2,8 +2,10 @@
 // static assets, and writes dist/manifest.json. See docs/design.md.
 import * as esbuild from "esbuild";
 import { buildManifest } from "./scripts/manifest.mjs";
-import { cp, mkdir, writeFile, rm } from "node:fs/promises";
+import { cp, mkdir, writeFile, rm, readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
+
+const pkg = JSON.parse(await readFile(new URL("./package.json", import.meta.url), "utf8"));
 
 const watch = process.argv.includes("--watch");
 const run = process.argv.includes("--run");
@@ -20,11 +22,12 @@ const entryPoints = {
 async function copyStatic() {
   await mkdir(`${outdir}/assets`, { recursive: true });
   await cp("assets/w3c_specs.json", `${outdir}/assets/w3c_specs.json`);
+  await cp("assets/icon.svg", `${outdir}/icon.svg`);
   await cp("src/ui/panel.html", `${outdir}/panel.html`);
   await cp("src/ui/panel.css", `${outdir}/panel.css`);
   await writeFile(
     `${outdir}/manifest.json`,
-    JSON.stringify(buildManifest(target), null, 2),
+    JSON.stringify(buildManifest(target, pkg.version), null, 2),
   );
 }
 

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="webspec-tracer">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8fc7ff"/>
+    </marker>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="#173b6e"/>
+  <g stroke="#8fc7ff" stroke-width="7" fill="none" stroke-linecap="round" marker-end="url(#arrow)">
+    <line x1="44" y1="42" x2="80" y2="60"/>
+    <line x1="84" y1="70" x2="52" y2="90"/>
+  </g>
+  <g fill="#e8f2ff">
+    <circle cx="38" cy="38" r="13"/>
+    <circle cx="90" cy="64" r="13"/>
+    <circle cx="46" cy="96" r="13"/>
+  </g>
+</svg>
