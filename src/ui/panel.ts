@@ -1,29 +1,22 @@
 /**
- * Sidebar trace console. Three modes:
- *  - path: shortest A → B chain;
- *  - outgoing: depth-limited call tree from one anchor;
- *  - interactive: step through outgoing calls, clicking each hop to grow a trace.
- * The rendered trace can be inserted into the active Bugzilla tab or copied.
+ * Sidebar trace console (interactive step-through). Enter a start anchor, then
+ * click through a node's outgoing calls — rendered as the real spec steps — to
+ * grow a trace one hop at a time. The rendered trace can be inserted into the
+ * active tab's focused text field or copied.
  */
 import { send } from "./api.js";
-import type { EdgesResponse, TraceRequest } from "../background/messages.js";
+import type { EdgesResponse } from "../background/messages.js";
 import type { TraceNode } from "../tracer/trace.js";
 import { renderPath } from "../render/trace-render.js";
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 
 const form = $<HTMLFormElement>("trace-form");
-const mode = $<HTMLSelectElement>("mode");
-const pathFields = $<HTMLDivElement>("path-fields");
-const outgoingFields = $<HTMLDivElement>("outgoing-fields");
-const interactiveFields = $<HTMLDivElement>("interactive-fields");
-const fromInput = $<HTMLInputElement>("from");
-const toInput = $<HTMLInputElement>("to");
-const refInput = $<HTMLInputElement>("ref");
 const startInput = $<HTMLInputElement>("start");
 const generateBtn = $<HTMLButtonElement>("generate");
 const insertBtn = $<HTMLButtonElement>("insert");
 const copyBtn = $<HTMLButtonElement>("copy");
+const resetBtn = $<HTMLButtonElement>("reset");
 const status = $<HTMLParagraphElement>("status");
 const out = $<HTMLPreElement>("out");
 const interactiveView = $<HTMLElement>("interactive-view");
@@ -32,9 +25,10 @@ const stepsEl = $<HTMLDivElement>("steps");
 const callsFallback = $<HTMLDivElement>("calls-fallback");
 const edgesEl = $<HTMLUListElement>("edges");
 const backBtn = $<HTMLButtonElement>("back");
-const resetBtn = $<HTMLButtonElement>("reset");
 
 let lastText = "";
+const baseMap = new Map<string, string | null>();
+let chain: TraceNode[] = [];
 
 function setResult(text: string) {
   lastText = text;
@@ -44,85 +38,12 @@ function setResult(text: string) {
   copyBtn.disabled = !has;
 }
 
-function syncModeFields() {
-  const m = mode.value;
-  pathFields.hidden = m !== "path";
-  outgoingFields.hidden = m !== "outgoing";
-  interactiveFields.hidden = m !== "interactive";
-  generateBtn.textContent = m === "interactive" ? "Start" : "Generate";
-  interactiveView.hidden = m !== "interactive" || chain.length === 0;
-}
-mode.addEventListener("change", () => {
-  syncModeFields();
-  status.textContent = "";
-});
-
-// ── path / outgoing modes ────────────────────────────────────────────────────
-
-function buildRequest(): TraceRequest | null {
-  if (mode.value === "path") {
-    const from = fromInput.value.trim();
-    const to = toInput.value.trim();
-    if (!from || !to) {
-      status.textContent = "Enter both From and To.";
-      return null;
-    }
-    return { kind: "trace", mode: "path", from, to };
-  }
-  const ref = refInput.value.trim();
-  if (!ref) {
-    status.textContent = "Enter an anchor.";
-    return null;
-  }
-  return { kind: "trace", mode: "outgoing", ref };
-}
-
-async function generate() {
-  const req = buildRequest();
-  if (!req) return;
-  generateBtn.disabled = true;
-  status.textContent = "Generating… (first fetch of a spec can take a few seconds)";
-  setResult("");
-  try {
-    const res = await send(req);
-    if (res.kind === "trace") {
-      setResult(res.text);
-      status.textContent = "";
-    } else if (res.kind === "error") {
-      status.textContent = res.message;
-    }
-  } catch (err) {
-    status.textContent = err instanceof Error ? err.message : String(err);
-  } finally {
-    generateBtn.disabled = false;
-  }
-}
-
-// ── interactive mode ─────────────────────────────────────────────────────────
-
-const baseMap = new Map<string, string | null>();
-let chain: TraceNode[] = [];
-
 const baseUrlFor = (spec: string) => baseMap.get(spec) ?? null;
 const label = (spec: string, anchor: string, contextSpec: string) =>
   spec === contextSpec ? `#${anchor}` : `${spec}#${anchor}`;
 
 function renderInteractiveTrace() {
   setResult(chain.length >= 2 ? renderPath(chain, baseUrlFor) : "");
-}
-
-/** Fetch and display the current node's outgoing edges. */
-async function showNode(spec: string, anchor: string) {
-  status.textContent = "Loading calls…";
-  edgesEl.textContent = "";
-  const res = await send({ kind: "edges", ref: `${spec}#${anchor}` });
-  if (res.kind === "error") {
-    status.textContent = res.message;
-    return;
-  }
-  if (res.kind !== "edges") return;
-  status.textContent = "";
-  renderNode(res);
 }
 
 /** Strip anything script-like from spec HTML before injecting it. */
@@ -135,23 +56,13 @@ function sanitize(container: HTMLElement) {
   }
 }
 
-function renderNode(res: EdgesResponse) {
-  baseMap.set(res.spec, res.baseUrl);
-  for (const edge of res.edges) baseMap.set(edge.toSpec, edge.baseUrl);
-  currentEl.textContent = res.title
-    ? `${res.spec}#${res.anchor} — ${res.title}`
-    : `${res.spec}#${res.anchor}`;
-
-  // Map each call-site id to its edge, so a link in the steps can descend.
-  const byCallSite = new Map<string, (typeof res.edges)[number]>();
-  for (const edge of res.edges) {
-    for (const id of edge.callSiteIds) byCallSite.set(id, edge);
-  }
-
-  const clickable = renderSteps(res, byCallSite);
-  stepsEl.hidden = !clickable;
-  callsFallback.hidden = clickable;
-  if (!clickable) renderEdgeList(res);
+function toNode(
+  spec: string,
+  anchor: string,
+  title: string | null,
+  viaCallSiteIds: string[],
+): TraceNode {
+  return { id: `${spec}#${anchor}`, spec, anchor, title, children: [], viaCallSiteIds };
 }
 
 /** Render the section's source HTML with in-algorithm calls clickable. Returns
@@ -193,8 +104,7 @@ function renderSteps(
   return true;
 }
 
-/** Fallback: a compact list of outgoing calls (used when there are no clickable
- * in-algorithm calls in the rendered steps, e.g. for non-algorithm nodes). */
+/** Fallback: a compact list of outgoing calls (for non-algorithm nodes). */
 function renderEdgeList(res: EdgesResponse) {
   edgesEl.textContent = "";
   if (res.edges.length === 0) {
@@ -219,13 +129,36 @@ function renderEdgeList(res: EdgesResponse) {
   }
 }
 
-function toNode(
-  spec: string,
-  anchor: string,
-  title: string | null,
-  viaCallSiteIds: string[],
-): TraceNode {
-  return { id: `${spec}#${anchor}`, spec, anchor, title, children: [], viaCallSiteIds };
+function renderNode(res: EdgesResponse) {
+  baseMap.set(res.spec, res.baseUrl);
+  for (const edge of res.edges) baseMap.set(edge.toSpec, edge.baseUrl);
+  currentEl.textContent = res.title
+    ? `${res.spec}#${res.anchor} — ${res.title}`
+    : `${res.spec}#${res.anchor}`;
+
+  const byCallSite = new Map<string, (typeof res.edges)[number]>();
+  for (const edge of res.edges) {
+    for (const id of edge.callSiteIds) byCallSite.set(id, edge);
+  }
+
+  const clickable = renderSteps(res, byCallSite);
+  stepsEl.hidden = !clickable;
+  callsFallback.hidden = clickable;
+  if (!clickable) renderEdgeList(res);
+}
+
+/** Fetch and display a node's outgoing edges. */
+async function showNode(spec: string, anchor: string) {
+  status.textContent = "Loading calls…";
+  edgesEl.textContent = "";
+  const res = await send({ kind: "edges", ref: `${spec}#${anchor}` });
+  if (res.kind === "error") {
+    status.textContent = res.message;
+    return;
+  }
+  if (res.kind !== "edges") return;
+  status.textContent = "";
+  renderNode(res);
 }
 
 async function startInteractive(ref: string) {
@@ -236,6 +169,7 @@ async function startInteractive(ref: string) {
     return;
   }
   if (res.kind !== "edges") return;
+  status.textContent = "";
   interactiveView.hidden = false;
   chain = [toNode(res.spec, res.anchor, res.title, [])];
   renderNode(res);
@@ -256,41 +190,22 @@ backBtn.addEventListener("click", () => {
   void showNode(cur.spec, cur.anchor);
 });
 
-/** Global reset: clear inputs, output, and interactive state, in any mode. */
-resetBtn.addEventListener("click", () => {
-  fromInput.value = "";
-  toInput.value = "";
-  refInput.value = "";
-  startInput.value = "";
-  chain = [];
-  interactiveView.hidden = true;
-  edgesEl.textContent = "";
-  stepsEl.textContent = "";
-  currentEl.textContent = "";
-  setResult("");
-  status.textContent = "";
-});
-
-// ── shared submit + actions ──────────────────────────────────────────────────
-
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  if (mode.value === "interactive") {
-    const ref = startInput.value.trim();
-    if (!ref) {
-      status.textContent = "Enter a start anchor.";
-      return;
-    }
-    generateBtn.disabled = true;
-    status.textContent = "Loading… (first fetch of a spec can take a few seconds)";
-    try {
-      await startInteractive(ref);
-    } finally {
-      generateBtn.disabled = false;
-    }
+  const ref = startInput.value.trim();
+  if (!ref) {
+    status.textContent = "Enter a start anchor.";
     return;
   }
-  await generate();
+  generateBtn.disabled = true;
+  status.textContent = "Loading… (first fetch of a spec can take a few seconds)";
+  try {
+    await startInteractive(ref);
+  } catch (err) {
+    status.textContent = err instanceof Error ? err.message : String(err);
+  } finally {
+    generateBtn.disabled = false;
+  }
 });
 
 insertBtn.addEventListener("click", async () => {
@@ -313,4 +228,14 @@ copyBtn.addEventListener("click", async () => {
   status.textContent = "Copied to clipboard.";
 });
 
-syncModeFields();
+/** Global reset: clear input, output, and interactive state. */
+resetBtn.addEventListener("click", () => {
+  startInput.value = "";
+  chain = [];
+  interactiveView.hidden = true;
+  edgesEl.textContent = "";
+  stepsEl.textContent = "";
+  currentEl.textContent = "";
+  setResult("");
+  status.textContent = "";
+});

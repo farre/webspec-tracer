@@ -9,42 +9,12 @@
   <body>
     <header><h1>webspec-tracer</h1></header>
     <main>
-      <label class="field">
-        Mode
-        <select id="mode">
-          <option value="path">Path (A → B)</option>
-          <option value="outgoing">Outgoing tree</option>
-          <option value="interactive">Interactive</option>
-        </select>
-      </label>
-
       <form id="trace-form">
-        <div id="path-fields">
-          <label class="field">
-            From
-            <input id="from" type="text" placeholder="HTML#dom-location-assign" />
-          </label>
-          <label class="field">
-            To
-            <input id="to" type="text" placeholder="#navigate, DOM#concept-node, or URL" />
-          </label>
-        </div>
-
-        <div id="outgoing-fields" hidden>
-          <label class="field">
-            Anchor
-            <input id="ref" type="text" placeholder="HTML#dom-location-assign" />
-          </label>
-        </div>
-
-        <div id="interactive-fields" hidden>
-          <label class="field">
-            Start
-            <input id="start" type="text" placeholder="HTML#dom-location-assign" />
-          </label>
-        </div>
-
-        <button type="submit" id="generate">Generate</button>
+        <label class="field">
+          Start
+          <input id="start" type="text" placeholder="HTML#dom-location-assign" />
+        </label>
+        <button type="submit" id="generate">Start</button>
       </form>
 
       <!-- Interactive step-through -->
