@@ -52,6 +52,13 @@ export function buildManifest(target, version = "0.0.0") {
       default_panel: "panel.html",
       default_icon: "icon.svg",
     },
+    // Keyboard shortcut to toggle the sidebar. Rebind via about:addons →
+    // Manage Extension Shortcuts.
+    commands: {
+      _execute_sidebar_action: {
+        suggested_key: { default: "Ctrl+Shift+U", mac: "Command+Shift+U" },
+      },
+    },
     content_scripts: CONTENT_SCRIPTS,
   };
 
