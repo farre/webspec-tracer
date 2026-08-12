@@ -305,9 +305,9 @@ insertBtn.addEventListener("click", async () => {
       kind: "insert",
       text: lastText,
     })) as InsertResponse;
-    status.textContent = res.ok ? "Inserted into comment." : res.message ?? "Insert failed.";
+    status.textContent = res.ok ? "Inserted." : res.message ?? "Insert failed.";
   } catch {
-    status.textContent = "Open a bugzilla.mozilla.org bug with a comment box first.";
+    status.textContent = "Focus a text field on a bugzilla.mozilla.org page first.";
   }
 });
 
