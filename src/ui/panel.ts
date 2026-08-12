@@ -256,7 +256,12 @@ backBtn.addEventListener("click", () => {
   void showNode(cur.spec, cur.anchor);
 });
 
+/** Global reset: clear inputs, output, and interactive state, in any mode. */
 resetBtn.addEventListener("click", () => {
+  fromInput.value = "";
+  toInput.value = "";
+  refInput.value = "";
+  startInput.value = "";
   chain = [];
   interactiveView.hidden = true;
   edgesEl.textContent = "";
