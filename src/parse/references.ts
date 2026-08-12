@@ -9,7 +9,7 @@
  * from→to pair, which extends webspec-index's model.
  */
 import type { ParsedReference, ParsedSection } from "../model/types.js";
-import { tag } from "./dom.js";
+import { algorithmExtent } from "./sections.js";
 
 /** Resolves a full spec URL to a (spec, anchor) target. */
 export interface UrlResolver {
@@ -22,34 +22,6 @@ function isSelfLink(a: Element): boolean {
 
 function isBiblioRef(a: Element): boolean {
   return a.getAttribute("data-link-type") === "biblio";
-}
-
-function isAlgorithmDiv(el: Element): boolean {
-  return tag(el) === "div" && (el.classList.contains("algorithm") || el.hasAttribute("data-algorithm"));
-}
-
-const BLOCK_STOP = new Set(["p", "div", "h2", "h3", "h4", "h5", "h6"]);
-
-/**
- * The DOM extent of the algorithm whose defining `<dfn>` is `dfn`, so a call
- * site can be tested for membership. Bikeshed: the enclosing `div.algorithm`.
- * Wattsi: the intro block (`<p>`/`<dd>`/`<li>`) plus its following list(s).
- * Returns [] when no algorithm body can be located.
- */
-function algorithmExtent(dfn: Element): Element[] {
-  for (let cur = dfn.parentElement; cur; cur = cur.parentElement) {
-    if (isAlgorithmDiv(cur)) return [cur];
-  }
-  let block: Element | null = dfn.parentElement;
-  while (block && !["p", "dd", "li"].includes(tag(block))) block = block.parentElement;
-  if (!block) return [];
-  const extent = [block];
-  for (let sib = block.nextElementSibling; sib; sib = sib.nextElementSibling) {
-    const name = tag(sib);
-    if (name === "ol" || name === "ul" || name === "dl") extent.push(sib);
-    else if (BLOCK_STOP.has(name)) break;
-  }
-  return extent;
 }
 
 /** Resolve an href to its (toSpec, toAnchor) target, or null. `#foo` → "self". */

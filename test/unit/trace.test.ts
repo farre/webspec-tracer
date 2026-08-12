@@ -59,6 +59,36 @@ describe("references — call-site scoping", () => {
   });
 });
 
+describe("algorithm extent — multiple algorithms in one div", () => {
+  // WHATWG sometimes wraps several algorithms in a single <div data-algorithm>.
+  const html = `
+    <div data-algorithm="">
+      <p>To <dfn id="algo-one">algo one</dfn>:</p>
+      <ol><li>Do <a href="#algo-two" id="s:algo-two">algo two</a>.</li></ol>
+      <p>To <dfn id="algo-two">algo two</dfn>:</p>
+      <ol><li>Do <a href="#thing" id="s:thing">thing</a>.</li></ol>
+    </div>`;
+
+  it("bounds each algorithm's content to itself (no bleed into the next)", () => {
+    const { sections } = parseHtml(html);
+    const one = sections.find((s) => s.anchor === "algo-one")!;
+    expect(one.contentHtml).not.toContain('id="algo-two"');
+    expect(one.contentHtml).toContain("algo two"); // the step-7-style call is kept
+  });
+
+  it("attributes each call to the right algorithm within the shared div", () => {
+    const { references } = parseHtml(html);
+    const one = references.filter((r) => r.fromAnchor === "algo-one");
+    const two = references.filter((r) => r.fromAnchor === "algo-two");
+    expect(one).toEqual([
+      { fromAnchor: "algo-one", toSpec: "TEST", toAnchor: "algo-two", callSiteIds: ["s:algo-two"] },
+    ]);
+    expect(two).toEqual([
+      { fromAnchor: "algo-two", toSpec: "TEST", toAnchor: "thing", callSiteIds: ["s:thing"] },
+    ]);
+  });
+});
+
 describe("outgoing trace", () => {
   it("builds the expected graph node/edge sets (depth 2)", async () => {
     const store = await storeFrom(CHAIN_HTML);

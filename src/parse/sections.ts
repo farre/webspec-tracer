@@ -111,24 +111,35 @@ function definitionContentHtml(el: Element): string | null {
   return block ? block.outerHTML : null;
 }
 
-/** Source HTML of an algorithm: the enclosing algorithm div, or the intro block
- * plus its following list. */
-function algorithmContentHtml(el: Element): string | null {
-  const div = findAncestor(el, isAlgorithmDiv);
-  if (div) return div.outerHTML;
-
-  const intro = findAncestor(el, (e) => ["p", "dd", "li"].includes(tag(e)));
-  if (!intro) return null;
-  let html = intro.outerHTML;
+/**
+ * The DOM elements comprising an algorithm's body: the intro block that holds
+ * its `<dfn>` plus the following list(s), stopping at the next block (e.g. the
+ * next algorithm's intro). This bounds a single `<div>` that holds several
+ * algorithms so one doesn't bleed into the next. Falls back to the enclosing
+ * algorithm `<div>` only when the dfn isn't in an intro block. Exported so
+ * references.ts can scope call sites to the same extent.
+ */
+export function algorithmExtent(dfn: Element): Element[] {
+  const intro = findAncestor(dfn, (e) => ["p", "dd", "li"].includes(tag(e)));
+  if (!intro) {
+    const div = findAncestor(dfn, isAlgorithmDiv);
+    return div ? [div] : [];
+  }
+  const extent = [intro];
   for (let sib = intro.nextElementSibling; sib; sib = sib.nextElementSibling) {
     const name = tag(sib);
-    if (name === "ol" || name === "ul" || name === "dl") {
-      html += sib.outerHTML;
-      break;
-    }
-    if (BLOCK_STOP.has(name)) break;
+    if (name === "ol" || name === "ul" || name === "dl") extent.push(sib);
+    else if (BLOCK_STOP.has(name)) break;
   }
-  return html;
+  return extent;
+}
+
+/** Source HTML of an algorithm body (bounded to a single algorithm). */
+function algorithmContentHtml(el: Element): string | null {
+  const html = algorithmExtent(el)
+    .map((e) => e.outerHTML)
+    .join("");
+  return html.trim() ? html : null;
 }
 
 /** The enclosing `<pre>` of an IDL definition. */
