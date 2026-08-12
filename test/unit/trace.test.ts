@@ -37,6 +37,28 @@ describe("references — algorithm chain", () => {
   });
 });
 
+describe("references — call-site scoping", () => {
+  it("records call sites only when inside the calling algorithm's body", () => {
+    const html = `
+      <div class="algorithm" data-algorithm="assign">
+        <p>To <dfn id="a-assign">assign(url)</dfn>:</p>
+        <ol><li>Do <a href="#a-navigate" id="in-body">navigate</a>.</li></ol>
+      </div>
+      <p>Note: see <a href="#a-navigate" id="in-prose">navigate</a> for details.</p>
+      <div class="algorithm" data-algorithm="navigate">
+        <p>To <dfn id="a-navigate">navigate</dfn>:</p>
+        <ol><li>Return.</li></ol>
+      </div>`;
+    const { references } = parseHtml(html);
+    const ref = references.find(
+      (r) => r.fromAnchor === "a-assign" && r.toAnchor === "a-navigate",
+    );
+    // The edge still exists (the prose link created it), but only the in-body
+    // call site is recorded.
+    expect(ref?.callSiteIds).toEqual(["in-body"]);
+  });
+});
+
 describe("outgoing trace", () => {
   it("builds the expected graph node/edge sets (depth 2)", async () => {
     const store = await storeFrom(CHAIN_HTML);
